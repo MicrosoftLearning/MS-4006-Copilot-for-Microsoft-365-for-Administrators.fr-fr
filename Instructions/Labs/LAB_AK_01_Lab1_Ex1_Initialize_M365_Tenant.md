@@ -8,9 +8,9 @@ Vous n’êtes pas autorisé à convertir un locataire en abonnement payant. Les
 
 # Parcours d’apprentissage 1 : Labo 1 – Exercice 1 – Initialiser votre locataire Microsoft 365 
 
-Adatum Corporation est une filiale de Contoso Electronics. Adatum exécute ses applications héritées (comme Microsoft Exchange Server 2019) dans un déploiement local. En votre qualité de nouvel administrateur Microsoft 365, nommé Holly Dickson, vous avez été chargé de préparer le déploiement Microsoft 365 d’Adatum pour Copilot pour Microsoft 365. 
+Adatum Corporation est une filiale de Contoso Electronics. Adatum exécute ses applications héritées (comme Microsoft Exchange Server 2019) dans un déploiement local. Toutefois, il s’est récemment abonné à Microsoft 365, créant ainsi un déploiement hybride dans lequel il doit synchroniser ses déploiements locaux et cloud. 
 
-Dans cet exercice, vous allez configurer le locataire d’évaluation gratuite Microsoft 365 d’Adatum et votre instructeur vous expliquera comment obtenir vos informations d’identification Microsoft 365 dans votre environnement hébergé dans un labo. Vous allez utiliser ces informations d’identification dans les labos restants de ce cours. 
+En tant qu’administrateur Microsoft 365 d’Adatum, vous avez été chargé de déployer Microsoft 365 dans le déploiement hybride d’Adatum à l’aide d’un environnement lab virtualisé. Dans cet exercice, vous allez configurer le locataire d’évaluation gratuite Microsoft 365 d’Adatum et votre instructeur vous expliquera comment obtenir vos informations d’identification Microsoft 365 dans votre environnement hébergé dans un labo. Vous allez utiliser ces informations d’identification dans les labos restants de ce cours. 
 
 Dans votre environnement de labo, le fournisseur d’hébergement de votre labo a déjà obtenu un tenant d’évaluation gratuite Microsoft 365 pour vous. Le fournisseur de votre labo a déjà créé deux comptes administrateur que vous allez utiliser dans l’environnement de labo de votre machine virtuelle : 
 
@@ -19,6 +19,8 @@ Dans votre environnement de labo, le fournisseur d’hébergement de votre labo 
 
 Vous allez vous connecter au Client 1 PC (LON-CL1) en utilisant le compte Adatum\Administrateur local. Lorsque vous accédez à Microsoft 365 pour la première fois, vous vous connectez initialement en utilisant le compte administrateur de locataire Microsoft 365 (Administrateur MOD). Vous allez ensuite préparer le locataire Microsoft 365 d’Adatum pour Microsoft Entra ID et pour les labos ultérieurs en tirant parti des alertes d’audit et de Microsoft Graph PowerShell.
 
+**Annonce MFA importante :** Microsoft Security a récemment utilisé une nouvelle astuce de sécurité dans les locataires d’évaluation utilisés dans ses cours de formation. Cette fonctionnalité nécessite que tous les locataires d’évaluation utilisés par Microsoft World-Wide Learning utilisent l’authentification multifacteur (MFA) chaque fois qu’un utilisateur se connecte à Microsoft 365. Microsoft World-Wide Learning ne peut pas désactiver cette exigence de sécurité dans ses laboratoires de formation. En outre, nous ne pouvons pas utiliser l’accès conditionnel pour activer ou désactiver la MFA pour les groupes d’utilisateurs sélectionnés. La MFA est activée pour tout le monde et ne peut jamais être désactivée. Chaque fois que vous vous connectez à Microsoft 365 dans ce locataire d’évaluation en tant qu’utilisateur fictif, vous devez vous connecter avec le compte et le mot de passe de l’utilisateur ET avec une deuxième forme d’authentification. Votre instructeur vous guidera tout au long du processus MFA actuellement employé dans le locataire.
+
 
 ### Tâche 1 : obtenir vos informations d’identification Microsoft 365
 
@@ -26,13 +28,17 @@ Une fois votre labo lancé, vous allez être en mesure d’accéder au locataire
 
 Du fait que des partenaires de formation peuvent proposer ce cours en utilisant l’un des fournisseurs autorisés d’hébergement de labo, les étapes réelles impliquées pour récupérer le nom d’utilisateur principal (UPN) et l’ID de locataire associés à votre locataire peuvent varier selon le fournisseur d’hébergement de labo. Par conséquent, votre instructeur vous fournira les instructions nécessaires sur la façon de récupérer ces informations pour votre cours. <br/>
 
-Nous vous conseillons de noter les informations suivantes (fournies par votre instructeur) pour une utilisation ultérieure :
+Notez les informations suivantes fournies par votre fournisseur d’hébergement de labo pour une utilisation ultérieure :
 
-- **Préfixe de locataire.** Ce préfixe de locataire est destiné aux comptes d’utilisateur Microsoft 365 que vous allez utiliser pour vous connecter à Microsoft 365 dans les labos de ce cours. Le domaine de chaque compte d’utilisateur Microsoft 365 est au format {user alias}@xxxxxZZZZZZ.onmicrosoft.com, où xxxxxZZZZZZ correspond au préfixe de locataire. Il se compose de deux parties : le préfixe (xxxxx, certains hébergeurs utilisent un préfixe générique comme M365x, tandis que d’autres utilisent les initiales de leur entreprise ou une autre désignation) et l’ID de locataire (ZZZZZZ, un numéro à 6 chiffres) de l’hébergeur de votre labo. Enregistrez la valeur de ce préfixe de locataire xxxxxZZZZZZ pour une utilisation ultérieure. Lorsque l’une des étapes de labo vous demande de vous connecter à Microsoft 365 en tant que l’un des comptes d’utilisateur (tels que l’Administrateur MOD), vous devez entrer la valeur xxxxxZZZZZZ obtenue ici comme partie du préfixe de locataire de votre domaine .onmicrosoft.com.
+- **Nom d’utilisateur administratif.** Lorsqu’une entreprise achète un abonnement Microsoft 365, Microsoft crée un compte d’administrateur par défaut dans le locataire de l’entreprise et lui attribue le rôle Administrateur général. La personne qui s’inscrit à l’abonnement Microsoft 365 est généralement celle qui reçoit ce compte Administrateur général par défaut. Dans ce locataire d’évaluation, votre fournisseur d’hébergement de labo a attribué le nom Administrateur MOD, le **nom d’utilisateur administratif** et le **mot de passe administratif** à ce compte. Le nom d’utilisateur administratif affecté à ce compte est **admin@{nom du locataire}**. 
 
-- **Mot de passe du locataire.** Il s’agit du mot de passe fourni par le fournisseur d’hébergement de votre labo pour le compte administrateur de locataire. **Remarque :** Vous utilisez non seulement ce mot de passe pour le compte d’utilisateur de locataire, mais aussi pour chacun des comptes d’utilisateur prédéfinis utilisés dans les labos.
+- **Mot de passe administratif.** Il s’agit du mot de passe attribué par votre fournisseur d’hébergement de labo au compte **Administrateur MOD**. Plus loin dans ce labo, vous allez créer un autre compte Administrateur général pour **Holly Dickson**. Par souci de rapidité dans le labo, vous attribuerez ce même **mot de passe administratif** au compte d’Holly. Seuls Holly et Administrateur MOD utiliseront ce **mot de passe administratif**.
 
-- **Nom de domaine personnalisé.** Le fournisseur d’hébergement de votre labo a créé un nom de domaine personnalisé pour Adatum. Vous allez utiliser ce domaine lors de l’ajout d’un domaine personnalisé dans Microsoft 365 dans un exercice ultérieur du labo. Le nom de domaine est au format **xxxUPNxxx.xxxCustomDomainxxx.xxx.** Vous devez remplacer **xxxUPNxxx** par le numéro du nom d’utilisateur principal fourni par le fournisseur d’hébergement de votre labo. Vous devez également remplacer **xxxCustomDomainxxx.xxx** par le nom de domaine du fournisseur d’hébergement du labo. Par exemple, supposons que le fournisseur d’hébergement de votre labo soit Fabrikam Inc. Si le nom d’utilisateur principal qu’il attribue à votre locataire est AMPVU3A et que son nom de domaine personnalisé est fabrikam.us, le nom de domaine de votre nouveau domaine personnalisé est alors AMPVU3a.fabrikam.us. Votre instructeur va vous fournir le nom de domaine personnalisé et le numéro du nom d’utilisateur principal du fournisseur d’hébergement de votre labo.  
+- **Nom du locataire.** Il s’agit du domaine de locataire du locataire d’évaluation qui a été affecté à votre environnement lab de machine virtuelle. Vous utiliserez ce nom de locataire lors de la connexion à Microsoft 365 et PowerShell en tant que différents comptes d’utilisateur dans les divers labos de ce cours. Le nom du locataire est au format **xxxxxZZZZZZ.onmicrosoft.com**, où xxxxxZZZZZZ est le préfixe du locataire et onmicrosoft.com est le nom de domaine. Le nom de domaine est le domaine associé à vos services Microsoft 365. Lorsque l’une des étapes du labo vous demandent de vous connecter à Microsoft 365 ou PowerShell avec l’un des comptes d’utilisateur, vous devez entrer l’alias de l’utilisateur suivi de ce nom de locataire. Par exemple, si votre préfixe de locataire était WWLx123456, lors de la connexion en tant que Holly Dickson, vous entreriez Holly@WWLx123456.onmicrosoft.com.
+
+- **Préfixe de locataire.** Le domaine de chaque compte d’utilisateur Microsoft 365 est au format {user alias}@xxxxxZZZZZZ.onmicrosoft.com, où xxxxxZZZZZZ correspond au préfixe de locataire. Il se compose de deux parties : le préfixe de l’hébergeur de votre labo (xxxxx, certains hébergeurs utilisent un préfixe générique comme M365x, tandis que d’autres utilisent les initiales de leur entreprise ou une autre désignation, comme WWLx) et l’ID de locataire (ZZZZZZ, généralement un numéro à 6 chiffres). 
+
+ - **Mot de passe utilisateur.** Votre locataire d’évaluation comprend un certain nombre de comptes d’utilisateur prédéfinis. L’un de ces comptes est Administrateur MOD, qui est le compte Administrateur général créé pour votre locataire d’évaluation. Votre fournisseur d’hébergement de labo a affecté le **mot de passe administratif** à ce compte. Le **mot de passe utilisateur**, en revanche, est le mot de passe que votre fournisseur d’hébergement de labo a affecté à tous les autres comptes d’utilisateur prédéfinis qu’il a créés. Ainsi, tous les autres comptes d’utilisateur prédéfinis qui se trouvent dans la liste **Utilisateurs actifs** (vous en utiliserez beaucoup dans les labos de ce cours) ont tous été affectés à ce **mot de passe utilisateur**. Vous devez utiliser ce mot de passe lors de la connexion avec l’un de ces utilisateurs, comme Alex Wilber, Joni Sherman, Lynne Robbins, etc.
 
 
 ### Tâche 2 : configurer un profil d’organisation pour Adatum
@@ -45,17 +51,17 @@ Tout au long des labos de ce cours, vous allez jouer le rôle du personnage nomm
 
 3. Dans la barre des tâches en bas de votre écran, sélectionnez l’icône **Microsoft Edge**. Si nécessaire, agrandissez la fenêtre de votre navigateur quand elle s’ouvre.
 
-4. Dans votre navigateur Edge, accédez à la page **Accueil Microsoft 365** en entrant l’URL suivante dans la barre d’adresse : **https://portal.office.com** 
+4. Dans votre navigateur Edge, accédez à la page **Accueil Microsoft 365** en entrant l’URL suivante dans la barre d’adresse : **https://portal.office.com** 
 
-5. Dans la boîte de dialogue **Se connecter** qui s’affiche, entrez le **Nom d’utilisateur de locataire Microsoft 365** fourni par le fournisseur d’hébergement de votre labo (il s’agit du compte Administrateur MOD). Le nom d’utilisateur doit se présenter sous la forme **admin@xxxxxZZZZZZ.onmicrosoft.com**, où xxxxxZZZZZZ est le préfixe de locataire attribué par le fournisseur d’hébergement de votre labo. Cliquez sur **Suivant**. <br/>
+5. Dans la boîte de dialogue **Se connecter** qui s’affiche, entrez le **Nom d’utilisateur administratif** fourni par le fournisseur d’hébergement de votre labo (il s’agit du compte Administrateur MOD). Le nom d’utilisateur doit se présenter sous la forme **admin@xxxxxZZZZZZ.onmicrosoft.com**, où xxxxxZZZZZZ est le préfixe de locataire attribué par le fournisseur d’hébergement de votre labo. Cliquez sur **Suivant**. <br/>
 
     **Remarque :** Il est possible que l’hébergement de votre labo offre la possibilité de sélectionner un bouton **Saisir le texte** (ou équivalent) près des données de ressource, tel que les noms d’utilisateur, les mots de passe, les commandes PowerShell et d’autres données devant être entrés au cours de ces labos. D’autres fournisseurs d’hébergement de labo peuvent offrir une autre méthode, comme la possibilité de copier et de coller ces informations. Tirez parti de cette fonctionnalité pour vous éviter d’avoir à saisir manuellement ces informations. 
 
-6. Dans la boîte de dialogue **Entrer le mot de passe**, entrez le **Mot de passe de locataire Microsoft 365** unique fourni par le fournisseur d’hébergement de votre labo, puis sélectionnez **Se connecter**.
+6. Dans la boîte de dialogue **Entrer le mot de passe**, entrez le **Mot de passe d’administration** unique fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**. Si nécessaire, complétez le processus de connexion MFA.
 
-7. Dans la boîte de dialogue **Rester connecté ?**, cochez la case **Ne plus afficher**, puis sélectionnez **Oui.** Dans la boîte de dialogue **Enregistrer le mot de passe** qui s’affiche, sélectionnez **Jamais**.
+7. Dans la boîte de dialogue **Rester connecté ?**, cochez la case **Ne plus afficher**, puis sélectionnez **Oui**. Dans la boîte de dialogue **Enregistrer le mot de passe** qui s’affiche, sélectionnez **Jamais**.
 
-8. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de l’écran, il n’existe aucune option pour la fermer. Au lieu de cela, à droite de la fenêtre, sélectionnez deux fois l’icône de flèche vers l’avant (**>**), puis sélectionnez l’icône de coche pour consulter les diapositives de cette fenêtre de message. 
+8. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de l’écran, il n’existe aucune option pour la fermer. Au lieu de cela, à droite de la fenêtre, sélectionnez deux fois l’icône de flèche vers l’avant (**>**), puis sélectionnez l’icône de coche pour parcourir les diapositives de cette fenêtre de message. 
 
 9. Si une fenêtre **Rechercher d’autres applications** ou **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur droit de la fenêtre pour la fermer. 
 
@@ -101,13 +107,13 @@ Dans la tâche précédente, vous avez appris que lorsqu’un utilisateur est co
 
 Les thèmes personnalisés doivent être associés à un ou plusieurs groupes Microsoft 365. Par conséquent, Holly doit d’abord créer un groupe Microsoft 365 pour tous les membres de l’équipe du projet pilote afin d’implémenter cette modification. Elle peut également créer un thème personnalisé associé à ce groupe qui permet au paramètre d’afficher le nom d’utilisateur connecté. Dans cette tâche, vous allez créer un groupe Microsoft 365 pour les membres de l’équipe du projet pilote Microsoft 365. Vous allez ensuite créer un thème personnalisé qui affiche le nom d’utilisateur connecté et attribuer ce thème à l’équipe du projet pilote. Vous allez également passer en revue d’autres options que vous pouvez configurer avec des thèmes personnalisés. Vous pouvez également apporter tous les changements de couleur de votre choix.
 
-**Remarque :** Vous allez également utiliser l’enregistrement d’équipe, que vous créez pour l’équipe de projet pilote Microsoft 365, dans des exercices de labo ultérieurs dans lesquels vous créez une stratégie d’accès conditionnel pour activer l’authentification multifacteur. Vous allez activer l’authentification multifacteur (MFA) pour tous les utilisateurs, à l’exception des membres de l’équipe du projet pilote.
+**Important :** À la fin de cette tâche, vous tenterez d’enregistrer le thème personnalisé que vous avez créé. Il existe un problème de plateforme connu dans le centre d’administration Microsoft 365, qui enregistre parfois le thème personnalisé correctement, et qui d’autres fois retourne un message indiquant « Désolé, nous n’avons pas pu enregistrer votre thème. Veuillez réessayer plus tard. » Si vous recevez ce message, il n’y a rien à faire, passez à autre chose. Essayer d’enregistrer le thème ultérieurement retourne généralement la même erreur. Ce problème n’affecte pas les labos futurs, sauf que le nom de l’utilisateur ne s’affichera pas en regard de son icône d’utilisateur, ni les initiales sur la ligne de titre. Malgré ce problème connu, nous voulons toujours que vous effectuiez cette tâche pour acquérir de l’expérience dans la création d’un thème, même s’il se peut qu’il ne soit pas enregistré dans votre locataire d’évaluation.
 
 1. Vous devez toujours être connecté à LON-CL1 sous le compte local **adatum\administrateur**, et dans votre navigateur Edge, vous devez toujours être connecté à Microsoft 365 en tant qu’**Administrateur MOD**. 
 
 2. Dans le **Centre d’administration Microsoft 365**, sélectionnez **Équipes + groupes** dans le volet de navigation et, en dessous, sélectionnez **Équipes et groupes actifs**. 
 
-3. Dans la page **Équipes et groupes actifs** figure un onglet permettant d’afficher chacun des types de groupe. L’onglet **Groupes Microsoft 365 et Teams** est affiché par défaut. Cet onglet affiche les groupes Microsoft 365 existants.  <br/>
+3. Dans la page **Équipes et groupes actifs** figure un onglet permettant d’afficher chacun des types de groupes. L’onglet **Groupes Microsoft 365 et Teams** est affiché par défaut. Cet onglet affiche les groupes Microsoft 365 existants.  <br/>
 
     Sélectionnez l’option **+ Ajouter un groupe Microsoft 365** qui s’affiche dans la barre de menus au-dessus de la liste des Groupes Microsoft 365 et Teams. Cette option lance l’Assistant **Ajouter un groupe Microsoft 365**. 
 
@@ -137,13 +143,13 @@ Les thèmes personnalisés doivent être associés à un ou plusieurs groupes Mi
 
     Sélectionnez **Fermer**. Cette option vous fait revenir à la page **Équipes et groupes actifs** dans laquelle l’onglet **Groupes Microsoft 365 et Teams** doit s’afficher. Étant donné que le groupe du projet pilote M365 était un groupe Microsoft 365, il doit finir par s’afficher sous cet onglet. Le cas échéant, sélectionnez l’option **Actualiser** sur la barre de menu jusqu’à ce que vous voyiez le groupe du projet pilote M365 dans la liste des Groupes Microsoft 365 et Teams.
 
-14. Dans le **Centre d’administration Microsoft 365**, sous le groupe **Paramètres** dans le volet de navigation, sélectionnez **Paramètres de l’organisation**. 
+14. Dans le **centre d’administration Microsoft 365**, sélectionnez **Paramètres** dans le volet de navigation, puis **Paramètres de l’organisation**. 
 
-15. Dans la page **Paramètres de l’organisation**, sélectionnez l’onglet **Profil de l’organisation**.
+15. Sur la page des **paramètres de l'organisation**, l'onglet **Services** s'affiche par défaut. Sélectionnez l’onglet **Profil d’organisation**.
 
-16. Dans les données du profil de l’organisation, sélectionnez **Thèmes personnalisés**.
+16. L’onglet **Profil de l’organisation** affiche la liste des données de profil de l’organisation. Dans la liste des données, sélectionnez **Thèmes personnalisés**.
 
-17. Dans le volet **Personnaliser Microsoft 365 pour votre organisation** qui s’affiche, vous pouvez personnaliser le thème par défaut visible par les utilisateurs connectés à Microsoft 365 ou ajouter d’autres thèmes personnalisés. Sélectionnez l’option **+ Ajouter un thème**.
+17. Dans le volet **Personnaliser Microsoft 365 pour votre organisation** qui s’affiche, vous pouvez personnaliser le thème par défaut visible par les utilisateurs connectés à Microsoft 365 ou ajouter d’autres thèmes personnalisés. Vous souhaitez créer un thème personnalisé qui s’applique uniquement aux membres du groupe **Projet pilote M365** que vous avez créé précédemment. Sélectionnez l’option **+Ajouter un thème**.
 
 18. Dans le volet **Nouveau thème de groupe** qui s’affiche, l’onglet **Général** s’affiche par défaut. Entrez **Thème de projet pilote M365** dans le champ **Nom**.
 
@@ -151,21 +157,33 @@ Les thèmes personnalisés doivent être associés à un ou plusieurs groupes Mi
 
     **Remarque :** Si **Projet pilote M365** ne s’affiche pas dans la liste de groupes, entez **M365** dans le champ **Groupes**. Une zone des résultats de la recherche doit s’afficher et montrer le groupe **Projet pilote M365**. Sélectionnez **Projet pilote M365**. 
 
-20. Sélectionnez la case à cocher **Afficher le nom d’affichage de l’utilisateur**. Il s’agit du paramètre qu’Holly souhaite personnaliser pour les membres de l’équipe du projet pilote M365. Cette option affiche le nom des utilisateurs à côté de leurs initiales dans chaque titre de fenêtre.
+20. Sélectionnez la case à cocher **Afficher le nom d’affichage de l’utilisateur**. Il s’agit du paramètre qu’Holly souhaite personnaliser pour les membres de l’équipe du projet pilote M365. Cette option affiche le nom de l’utilisateur connecté à côté de ses initiales dans chaque titre de fenêtre.
  
-21. Sélectionnez **Enregistrer**. Fermez le volet **Thème de projet pilote M365** une fois vos modifications enregistrées. 
+21. Sélectionnez l’onglet **Logos** et prenez le temps de passer en revue ses options. Faites de même pour l’onglet **Couleurs**. Notez les différentes options de thème et de personnalisation disponibles que vous pouvez mettre à jour. <br/>
 
-22. Sélectionnez l’icône **Actualiser** en haut de l’écran, à gauche de la barre d’adresse. Une fois l’écran actualisé, notez la façon dont le nom **Administrateur MOD** s’affiche à gauche du cercle avec l’icône de mégaphone. Lorsque des membres de l’équipe du projet pilote Microsoft 365 se connectent à Microsoft 365, leur nom d’utilisateur s’affiche désormais à gauche de leur image de profil (ou, dans ce cas, une icône de mégaphone) ou de leurs initiales en raison du thème personnalisé créé.
+    Dans le cadre de ce labo, vous pouvez modifier l’une des options ou laisser les valeurs par défaut telles quelles. Par exemple, dans votre environnement réel, vous pouvez ajouter le logo de votre entreprise et définir l’image d’arrière-plan comme valeur par défaut pour tous vos utilisateurs. Pour ce labo, n’hésitez pas à modifier les couleurs de votre volet de navigation, la couleur de texte, la couleur d’icône et la couleur d’accentuation. <br/>
 
-23. Dans les données du profil de l’organisation, sélectionnez **Thèmes personnalisés**.
+    **Explorez les différentes options de ce thème qui sera utilisé par les membres de l’équipe Projet pilote Microsoft 365. Apportez les modifications souhaitées.** <br/>
 
-24. Dans le volet **Personnaliser Microsoft 365 pour votre organisation** qui s’affiche, notez l’affichage du **Thème par défaut** et du **Thème du projet pilote M365**. Sélectionnez le **Thème par défaut**. 
+    **Conseil :** Certains motifs de couleur peuvent distraire les utilisateurs. Si vous modifiez l’une des couleurs, il est recommandé d’éviter d’utiliser des couleurs à contraste élevé ensemble, telles que des couleurs néon et des couleurs haute résolution comme rose vif et blanc.
 
-25. Dans le volet **Thème par défaut**, notez que l’option **Afficher le nom d’affichage de l’utilisateur** n’est pas sélectionnée pour le thème par défaut. Si Holly décide plus tard de transformer l’option **Afficher le nom d’affichage de l’utilisateur** en fonctionnalité permanente, elle sélectionnera cette option dans le volet **Thème par défaut** pour qu’elle s’applique à tous les utilisateurs Adatum et supprimera le **Thème du projet pilote M365**. <br/>
+22. Sélectionnez **Enregistrer**. 
 
-    Fermez le volet **Thème personnalisé**.
+    **Remarque :** Comme mentionné précédemment au début de cette tâche, il existe un problème de plateforme connu dans le centre d’administration Microsoft 365 qui enregistre parfois un nouveau thème personnalisé, et qui d’autres fois retourne un message indiquant « Désolé, nous n’avons pas pu enregistrer votre thème. Veuillez réessayer plus tard. » Si vous recevez ce message, cela n’affectera pas les labos futurs. Étant donné que votre thème personnalisé n’a pas été enregistré, le système n’affiche simplement pas le nom de l’utilisateur en regard de son icône d’utilisateur ou ses initiales sur la ligne de titre (les modifications de couleur que vous avez apportées n’apparaîtront pas non plus). Nous vous avons toujours demandé d’effectuer cette tâche, même si vous pouvez recevoir ce message, afin que vous puissiez acquérir l’expérience de création d’un thème tel que celui-ci. Par conséquent, si vous obtenez cette erreur, ignorez l’étape suivante, qui teste le thème personnalisé. Toutefois, vous pouvez toujours effectuer les étapes restantes après l’étape suivante pour en savoir plus sur le thème par défaut. Que votre thème personnalisé ait été enregistré ou non, fermez le volet **Thème Projet pilote M365**.
 
-26. Restez connecté à **LON-CL1** avec Microsoft Edge ouvert dans le **Centre d’administration Microsoft 365** pour la tâche suivante.
+23. Si votre thème personnalisé n’a pas été enregistré, passez à l’étape suivante. Toutefois, si votre thème personnalisé a été enregistré, sélectionnez l’icône **Actualiser** en haut de l’écran, à gauche de la barre d’adresses. Une fois l’écran actualisé, notez comment le nom **Administrateur MOD** apparaît à gauche du cercle avec les initiales AM ou l’icône sélectionnée pour ce compte par votre fournisseur d’hébergement de labo. Lorsque les membres de l’équipe Projet pilote Microsoft 365 se connectent à Microsoft 365, ce thème personnalisé affiche son nom d’utilisateur, tout comme le nom Administrateur MOD apparaît ici. 
+
+24. Dans les données du profil de l’organisation, sélectionnez **Thèmes personnalisés**.
+
+25. Dans le volet **Personnaliser Microsoft 365 pour votre organisation** qui s’affiche, notez l’affichage du **Thème par défaut** et du **Thème Projet pilote M365** (si le thème a été enregistré à l’étape précédente). Sélectionnez le **Thème par défaut**. 
+
+26. Dans le volet **Thème par défaut**, notez que l’option **Afficher le nom d’affichage de l’utilisateur** n’est pas sélectionnée pour le thème par défaut. Si Holly décide plus tard de transformer l’option **Afficher le nom d’affichage de l’utilisateur** en fonctionnalité permanente, elle sélectionnera cette option dans le volet **Thème par défaut** pour qu’elle s’applique à tous les utilisateurs Adatum et supprimera le **Thème du projet pilote M365**. <br/>
+
+    **Remarque :** Si vous avez reçu le message « Désolé, nous n’avons pas pu enregistrer votre thème. » Veuillez réessayer plus tard. » lorsque vous avez précédemment essayé d’enregistrer votre thème personnalisé, sélectionnez l’option **Afficher le nom d’affichage de l’utilisateur** sur le thème par défaut, puis sélectionnez **Enregistrer**. Nous voulons que vous voyiez ce qui se passe quand cette option est sélectionnée, même si vous n’avez pas pu enregistrer votre thème personnalisé. Si vous définissez cette option sur le thème par défaut, sélectionnez l’icône **Actualiser** en haut de l’écran, à gauche de la barre d’adresses. Une fois l’écran actualisé, notez comment le nom **Administrateur MOD** apparaît à gauche du cercle avec les initiales AM ou l’icône sélectionnée pour ce compte par votre fournisseur d’hébergement de labo.
+ 
+27. Fermez le volet **Thème par défaut**.
+
+28. Restez connecté à **LON-CL1** avec Microsoft Edge ouvert dans le **Centre d’administration Microsoft 365** pour la tâche suivante.
 
 ### Tâche 4 : installer Microsoft Graph PowerShell 
 
