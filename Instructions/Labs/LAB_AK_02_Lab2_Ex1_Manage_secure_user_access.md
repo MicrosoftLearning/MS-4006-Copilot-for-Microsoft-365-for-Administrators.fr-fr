@@ -36,7 +36,7 @@ Holly Dickson est la nouvelle administratrice Microsoft 365 d’Adatum. Aucun c
 
 5. Dans la page **Utilisateurs actifs**, dans la liste des utilisateurs, sélectionnez **Christie Cline** (sélectionnez le nom de Christie en lien hypertexte, et non la case à cocher en regard de son nom).
 
-6. Dans le volet **Christie Cline** qui s’affiche, l’onglet **Compte** s’affiche par défaut. Sélectionnez l’onglet **Licences et applications**. Sous **Licences (2)**, décochez les cases en regard d’**Enterprise Mobility + Security E5** et de **Microsoft 365 E5**, puis sélectionnez **Enregistrer les modifications**. Une fois les modifications enregistrées, fermez le volet **Christie Cline**. 
+6. Dans le volet **Christie Cline** qui s’affiche, l’onglet **Compte** s’affiche par défaut. Sélectionnez l’onglet **Licences et applications**. Sous **Licences (2)**, décochez les cases en regard d’**Enterprise Mobility + Security E5** et de **Microsoft 365 E5**, puis sélectionnez **Enregistrer les modifications**. Une fois les modifications enregistrées, fermez le volet **Christie Cline**.
 
 7. Vous êtes maintenant prêt à créer un compte d’utilisateur pour Holly Dickson, la nouvelle administratrice Microsoft 365 d’Adatum. Vous attribuerez à Holly le rôle Administrateur général Microsoft 365, qui lui donnera un accès global à la plupart des fonctionnalités de gestion et des données dans les services en ligne Microsoft. Vous affecterez également à Holly les deux licences que vous venez de retirer de Christie Cline. <br/>
 
@@ -157,9 +157,13 @@ Dans une tâche précédente, vous avez créé un groupe Microsoft 365 pour les 
 23. Restez connecté à LON-CL1 avec le **Centre d’administration Microsoft 365** ouvert dans votre navigateur pour la tâche suivante.
 
 
-### Tâche 3 : Déployer MFA en utilisant une stratégie d’accès conditionnel
+### Tâche 3 : Créer une stratégie d’accès conditionnel pour implémenter la MFA
+
+**IMPORTANT :** Cette tâche consiste dans un premier temps à examiner la stratégie d’accès conditionnel que Microsoft a créée afin d’implémenter la MFA pour tous les utilisateurs. Toutefois, il se peut que votre partenaire d’apprentissage utilise des locataires d’évaluation antérieurs au changement récent de stratégie MFA. Si vous n’avez pas été invité à effectuer la MFA après chaque connexion utilisateur, votre locataire d’évaluation n’exige pas la MFA. Dans ce cas, la stratégie MFA que Microsoft a créée n’apparaît pas dans votre liste de stratégies. Si c’est le cas avec votre locataire, vous pourrez ignorer les étapes visant à examiner cette stratégie. 
 
 Comme indiqué dans votre formation, il existe trois manières d’implémenter MFA : avec des stratégies d’accès conditionnel, avec des paramètres de sécurité par défaut, et avec l’authentification multifacteur héritée par utilisateur (non recommandée pour les grandes organisations). Dans cet exercice, vous allez activer MFA par le biais d’une stratégie d’accès conditionnel, ce qui est la méthode recommandée par Microsoft. Adatum a chargé Holly d’activer la MFA pour tous ses utilisateurs Microsoft 365, à la fois internes et externes. Toutefois, pour tester l’implémentation du projet pilote Microsoft 365 d’Adatum, Holly souhaite faire en sorte que les membres du groupe de projet pilote M365 ne soient pas obligés d’utiliser MFA pour se connecter. Une fois le projet pilote terminé, Holly mettra à jour la stratégie en supprimant l’exclusion de ce groupe de l’exigence MFA. La stratégie inclura également deux autres exigences. Elle exigera MFA pour toutes les applications cloud, même si un utilisateur se connecte à partir d’une localisation approuvée. 
+
+**Remarque :** Même si, dans le cadre de cette tâche d’activation de la MFA, vous allez créer une stratégie d’accès conditionnel, vous n’activerez PAS cette dernière. Il se peut que le locataire de certains étudiants exige la MFA. Dans ce cas, cette stratégie ne sera pas appliquée. Et même si chaque étudiant de la classe a un locataire qui n’impose pas la MFA, vous n’activerez pas pour autant la stratégie. Cet exercice vise à vous faire acquérir une expérience en matière de création de stratégie d’activation de la MFA, pas à vous demander de vous authentifier avec la MFA. Nous considérons que vous savez déjà le faire. Nous avons donc décidé de ne pas demander aux étudiants d’activer leur stratégie, ce qui constitue le meilleur compromis compte tenu de la situation potentielle eu égard aux locataires utilisés dans votre classe. 
 
 1. Sur la machine virtuelle LON-CL1, le **Centre d’administration Microsoft 365** doit toujours être ouvert dans votre navigateur Microsoft Edge suite à la tâche précédente. Vous devez être connecté à Microsoft 365 en tant que **Holly Dickson**.
    
@@ -169,7 +173,9 @@ Comme indiqué dans votre formation, il existe trois manières d’implémenter 
 
 4. Sur la page **Accès conditionnel | Vue d’ensemble**, sélectionnez **Stratégies** dans le volet de navigation central.
 
-5. Dans la page **Accès conditionnel | Stratégies**, passez en revue les stratégies par défaut disponibles avec votre abonnement Microsoft 365. Notez la stratégie intitulée **Authentification multifacteur pour les partenaires et les fournisseurs Microsoft**. Il s’agit de la stratégie d’accès conditionnel créée par Microsoft qui requiert la MFA pour tous les utilisateurs sur toutes les applications cloud. Sélectionnez cette stratégie pour voir comment Microsoft applique la MFA à tous les utilisateurs de ce locataire d’évaluation.
+5. Dans la page **Accès conditionnel | Stratégies**, passez en revue les stratégies par défaut disponibles avec votre abonnement Microsoft 365. Notez la stratégie intitulée **Authentification multifacteur pour les partenaires et les fournisseurs Microsoft**. Il s’agit de la stratégie d’accès conditionnel créée par Microsoft qui requiert la MFA pour tous les utilisateurs sur toutes les applications cloud. Sélectionnez cette stratégie pour voir comment Microsoft applique la MFA à tous les utilisateurs de ce locataire d’évaluation.   <br/>
+
+    **IMPORTANT :** Votre partenaire d’apprentissage utilise peut-être des locataires d’évaluation antérieurs à ce changement récent de MFA. Si vous n’avez pas été invité à effectuer la MFA après chaque connexion utilisateur, votre locataire d’évaluation n’exige pas la MFA. Dans ce cas, la stratégie intitulée **Authentification multifacteur pour les partenaires et les fournisseurs Microsoft** n’apparaît pas dans votre liste de stratégies. Vous devez alors passer à l’étape 11 pour commencer à créer votre propre stratégie d’accès conditionnel. 
 
 6. Sur la page **Authentification multifacteur pour les partenaires et les fournisseurs Microsoft**, sous le groupe **Utilisateurs**, sélectionnez **Tous les utilisateurs inclus et utilisateurs spécifiques exclus**. Cela affiche deux onglets : **Inclure** et **Exclure**.
 
@@ -223,17 +229,15 @@ Comme indiqué dans votre formation, il existe trois manières d’implémenter 
 
 24. Dans le volet **Octroyer** qui s’affiche, vérifiez que l’option **Autoriser l’accès** est sélectionnée (sélectionnez-la si nécessaire). Ensuite, cochez la case **Exiger une authentification multifacteur**. Notez tous les autres contrôles d’accès disponibles qui peuvent être activés avec cette stratégie. Pour cette stratégie, vous n’aurez besoin que de MFA. Sélectionnez le bouton **Sélectionner** en bas du volet **Octroyer** afin de fermer le volet. 
 
-25. En bas de la fenêtre **Nouveau**, dans le champ **Activer la stratégie**, sélectionnez **Activée**.
-
-26. Notez l’option qui apparaît en bas de la page pour vous avertir de ne pas vous bloquer vous-même. Sélectionnez l’option **Je comprends que mon compte sera affecté par cette stratégie. Continuer malgré tout.** En fait, Holly ne sera pas affectée, car elle est membre du groupe de projet pilote M365, qui est exclu de cette stratégie.
+25. **IMPORTANT :** À ce stade, vous devriez normalement définir le champ **Activer la stratégie** sur **Activé**. Or, comme certains étudiants sont susceptibles de disposer d’anciens locataires d’évaluation qui n’exigent pas la MFA et d’autres de disposer de nouveaux locataires qui l’imposent, vous n’activerez PAS la stratégie que vous venez de créer. À ce titre, définissez le champ **Activer la stratégie** sur **Désactivé**.
 
 27. Sélectionnez le bouton **Créer** pour créer la stratégie.
 
-28. Dans la fenêtre **Accès conditionnel | Stratégies** qui s’affiche, vérifiez que la stratégie **MFA pour tous les utilisateurs Microsoft 365** s’affiche et que son **État** est **Activée**.
+28. Dans la fenêtre **Accès conditionnel | Stratégies** qui s’affiche, vérifiez que la stratégie **MFA pour tous les utilisateurs Microsoft 365** s’affiche et que son **État** est **Désactivé**.
 
 29. Restez connecté à LON-CL1 avec tous vos onglets de navigateur Microsoft Edge ouverts pour la tâche suivante.
 
-**Remarque :** Conformément à la discussion précédente, il n’existe aucun moyen de tester votre stratégie d’accès conditionnel dans le locataire d’évaluation Microsoft 365 actuel. La stratégie d’accès conditionnel de Microsoft requiert la MFA pour tous les utilisateurs. Lorsque vous avez plusieurs stratégies qui requièrent la MFA, la stratégie la plus restrictive s’applique. Dans ce cas, la stratégie de Microsoft est plus restrictive que celle que vous venez de créer, qui incluait des exceptions pour les membres du groupe Projet pilote. Même si vous ne pouvez pas tester votre stratégie à l’aide de ce locataire d’évaluation, nous vous encourageons à utiliser cette expérience de création d’une stratégie d’accès conditionnel pour exiger la MFA dans vos déploiements Microsoft 365 réels.
+**Remarque :** Comme indiqué précédemment, vous n’avez pas la possibilité de tester votre stratégie d’accès conditionnel si votre locataire d’évaluation Microsoft 365 exige la MFA. La stratégie d’accès conditionnel de Microsoft requiert la MFA pour tous les utilisateurs. Lorsque vous avez plusieurs stratégies qui requièrent la MFA, la stratégie la plus restrictive s’applique. Dans ce cas, la stratégie de Microsoft est plus restrictive que celle que vous venez de créer, qui incluait des exceptions pour les membres du groupe Projet pilote. Vous n’avez donc pas la possibilité de tester votre stratégie. Si votre locataire est ancien et n’exige pas la MFA, vous ne la testerez pas, car il se peut que d’autres étudiants de la classe aient un locataire qui leur impose déjà d’utiliser la MFA. Plutôt que de vous demander de tester votre stratégie sachant que d’autres ne le peuvent pas, nous avons décidé de ne pas vous faire tester la stratégie. Même si vous ne pouvez pas tester votre stratégie à l’aide de ce locataire d’évaluation, nous vous encourageons à utiliser cette expérience de création d’une stratégie d’accès conditionnel pour exiger la MFA dans vos déploiements Microsoft 365 réels.
 
 
 ### Tâche 4 : Déployer le verrouillage intelligent Microsoft Entra
