@@ -279,7 +279,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
 20. Dans la fenêtre **Se connecter**, entrez **JoniS@xxxxxZZZZZZ.onmicrosoft** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo), puis sélectionnez **Suivant**.
 
-21. Dans la fenêtre **Entrer le mot de passe**, entrez le même **Mot de passe d’administration** que celui fourni par votre fournisseur d’hébergement de labo pour le compte d’administrateur du locataire (c’est-à-dire le compte Administrateur MOD), puis sélectionnez **Se connecter**.
+21. Dans la fenêtre **Entrer un mot de passe**, entrez le **mot de passe utilisateur** fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**. Si nécessaire, complétez le processus de connexion MFA.
 
 22. Si une fenêtre **Bienvenue** s’affiche, sélectionnez le X pour la fermer.
 
