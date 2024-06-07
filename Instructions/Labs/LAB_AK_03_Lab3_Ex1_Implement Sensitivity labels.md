@@ -2,7 +2,7 @@
 
 Jouant le rôle d’Holly Dickson, la nouvelle administratrice Microsoft 365 d’Adatum, vous avez déployé Microsoft 365 dans un environnement de laboratoire virtualisé. Les étapes suivantes de votre projet pilote Microsoft 365 consistent à implémenter des étiquettes de confidentialité avec Microsoft Entra ID Protection chez Adatum. Dans ce labo, vous allez créer et publier une étiquette, puis vous testerez une étiquette publiée. Toutefois, ce faisant, vous ne testerez pas l’étiquette que vous créerez dans ce labo, mais plutôt une autre étiquette.
 
-**Important :** Lorsque vous publiez une nouvelle étiquette de confidentialité et une stratégie d’étiquette, la propagation via Microsoft 365 peut prendre jusqu’à 24 heures. Par conséquent, vous ne pourrez pas tester l’étiquette que vous créerez dans ce labo. Au lieu de cela, vous testerez une étiquette de confidentialité préexistante nommée **Project - Falcon**. Cette étiquette préexistante est presque identique à l’étiquette que vous créerez. Vous pourrez donc observer les mêmes résultats que ceux que vous auriez pu observer avec l’étiquette que vous avez créée. 
+**Important :** Lorsque vous publiez une nouvelle étiquette de confidentialité et une stratégie d’étiquette, la propagation via Microsoft 365 peut prendre jusqu’à 24 heures. Par conséquent, vous ne pourrez pas tester l’étiquette que vous créerez dans ce labo. Au lieu de cela, vous testerez une étiquette de confidentialité préexistante nommée **Project - Falcon**. Comme cette étiquette préexistante est presque identique à l’étiquette que vous créez, vous pouvez observer les mêmes résultats qu’avec l’étiquette que vous avez créée si vous aviez pu la tester. 
 
 
 ### Tâche 1 : Installer le client d’étiquetage unifié Microsoft Entra ID Protection
@@ -335,5 +335,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
     **Remarque :**  Lors de cette tâche, vous avez vérifié que Microsoft Entra ID Protection protégeait le document en fonction des paramètres de stratégie d’informations d'identification personnelle que vous aviez configurés. Lorsque Joni disposait de l’autorisation Affichage uniquement, le document s’ouvrait en Mode Lecture et elle ne pouvait pas le modifier. Lorsque l’autorisation Modifier a été octroyée à Joni, le document s’est ouvert dans Word et elle a pu le modifier. Et comme Holly n’a pas partagé le document avec vous, vous n’avez pas pu l’ouvrir quand elle l’a envoyé dans un e-mail à votre boîte aux lettres personnelle. 
 
+## Fin du labo 3
 
-## Félicitations ! Vous venez de terminer le dernier labo de ce cours.
+
+# Félicitations ! Vous venez de terminer le dernier labo de ce cours.
