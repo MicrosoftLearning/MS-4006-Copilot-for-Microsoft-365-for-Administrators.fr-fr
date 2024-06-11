@@ -2,7 +2,7 @@
 
 Jouant le rôle d’Holly Dickson, la nouvelle administratrice Microsoft 365 d’Adatum, vous avez déployé Microsoft 365 dans un environnement de laboratoire virtualisé. Les étapes suivantes de votre projet pilote Microsoft 365 consistent à implémenter des étiquettes de confidentialité avec Microsoft Entra ID Protection chez Adatum. Dans ce labo, vous allez créer et publier une étiquette, puis vous testerez une étiquette publiée. Toutefois, ce faisant, vous ne testerez pas l’étiquette que vous créerez dans ce labo, mais plutôt une autre étiquette.
 
-**Important :** Lorsque vous publiez une nouvelle étiquette de confidentialité et une stratégie d’étiquette, la propagation via Microsoft 365 peut prendre jusqu’à 24 heures. Par conséquent, vous ne pourrez pas tester l’étiquette que vous créerez dans ce labo. Au lieu de cela, vous testerez une étiquette de confidentialité préexistante nommée **Project - Falcon**. Cette étiquette préexistante est presque identique à l’étiquette que vous créerez. Vous pourrez donc observer les mêmes résultats que ceux que vous auriez pu observer avec l’étiquette que vous avez créée. 
+**Important :** Lorsque vous publiez une nouvelle étiquette de confidentialité et une stratégie d’étiquette, la propagation via Microsoft 365 peut prendre jusqu’à 24 heures. Par conséquent, vous ne pourrez pas tester l’étiquette que vous créerez dans ce labo. Au lieu de cela, vous testerez une étiquette de confidentialité préexistante nommée **Project - Falcon**. Comme cette étiquette préexistante est presque identique à l’étiquette que vous créez, vous pouvez observer les mêmes résultats qu’avec l’étiquette que vous avez créée si vous aviez pu la tester. 
 
 
 ### Tâche 1 : Installer le client d’étiquetage unifié Microsoft Entra ID Protection
@@ -183,45 +183,52 @@ Au lieu de cela, vous allez tester l’une des étiquettes de confidentialité p
 
 1. Sur LON-CL1, dans votre navigateur Edge, vous devez toujours être connecté à Microsoft 365 en tant que **Holly Dickson**.
 
-2. Pour valider l’étiquette de sensibilité **Project – Falcon**, vous devez d’abord l’affecter à un document. Sélectionnez l’onglet **Accueil | Microsoft 365** dans votre navigateur pour revenir à la page d’accueil de Microsoft 365. Sélectionnez l’icône **Applications** sur le côté gauche de l’écran. Dans la page **Applications** qui s’affiche, cliquez avec le bouton droit sur la vignette **Word**, puis sélectionnez **Ouvrir dans un nouvel onglet**. 
+2. Vous allez d’abord passer en revue l’étiquette de confidentialité **Project-Falcon** que vous allez appliquer à un document dans cette tâche.  Dans votre navigateur Edge, vous devez toujours avoir un onglet ouvert pour le portail **Microsoft Purview** de la tâche précédente. Dans le portail **Microsoft Purview**, sous le groupe**protection des données** dans le volet de navigation gauche, sélectionnez **Étiquettes**. 
 
-3. Sous l’onglet **Word | Microsoft 365**, dans la section **Créer nouveau** en haut de la page, sélectionnez **Document vide**.
+3. Sur la page **Étiquettes**, dans la liste des étiquettes, sélectionnez la flèche droite (**>**) à côté de **Hautement confidentiel** pour afficher les sous-étiquettes sous cette étiquette. Cela affiche l’étiquette préexistante **Project - Falcon**.
 
-4. Si une fenêtre **Votre option de confidentialité** s’affiche, sélectionnez **Fermer**.
+4. Sélectionnez l’étiquette **Project - Falcon** (et non la case à cocher ; sélectionnez le nom de l’étiquette). Cela ouvre un volet d'informations **Project - Falcon**. Passez en revue les informations définies pour cette étiquette, puis fermez le volet lorsque vous avez terminé.  
 
-5. Si le ruban Word affiche des icônes pour chaque fonctionnalité mais ne répartit pas les icônes par groupe, sélectionnez la flèche vers le bas sur le côté droit du ruban puis, sous **Disposition du ruban**, sélectionnez **Ruban Classique**. Cela permet de basculer vers le style de ruban traditionnel, qui affiche une répartition par groupe de fonctionnalités (par exemple, Annuler, Presse-papiers, Police, Paragraphe, Styles, et ainsi de suite).
+5. Vous allez maintenant attribuer l’étiquette de confidentialité **Project-Falcon** à un document. Sélectionnez l’onglet **Accueil | Microsoft 365** dans votre navigateur pour revenir à la page d’accueil de Microsoft 365. Sélectionnez l’icône **Applications** sur le côté gauche de l’écran. Dans la page **Applications** qui s’affiche, cliquez avec le bouton droit sur la vignette **Word**, puis sélectionnez **Ouvrir dans un nouvel onglet**. 
 
-6. Dans le document **Word**, tapez le texte suivant : **Test d’une étiquette de confidentialité sur un document avec des informations d’identification personnelle, en l’occurrence un numéro de sécurité sociale des USA : 111-11-1111.**
+6. Sous l’onglet **Word | Microsoft 365**, dans la section **Créer nouveau** en haut de la page, sélectionnez **Document vide**.
 
-7. Étant donné que vous avez activé les étiquettes de confidentialité au début de cet exercice, **Word** doit afficher un groupe **Confidentialité** sur le ruban en haut de la page. Sélectionnez la flèche vers le bas dans le groupe **Confidentialité**. Dans le menu déroulant qui s’affiche doit figurer la liste des types d’étiquettes de confidentialité. Sélectionnez **Hautement confidentiel** puis, dans le sous-menu qui s’affiche, sélectionnez **Project – Falcon**. <br/>
+7. Si une fenêtre **Votre option de confidentialité** s’affiche, sélectionnez **Fermer**.
 
-    **Remarque :** Après 24 heures, l’étiquette que vous avez créée durant la tâche précédente apparaîtra dans le sous-manu Hautement confidentiel, à côté de l’étiquette Project – Falcon. Mais pour l’heure, vous allez utiliser l’étiquette **Project – Falcon** à la place.
+8. Si le ruban Word affiche des icônes pour chaque fonctionnalité mais ne répartit pas les icônes par groupe, sélectionnez la flèche vers le bas sur le côté droit du ruban puis, sous **Disposition du ruban**, sélectionnez **Ruban Classique**. Cela permet de basculer vers le style de ruban traditionnel, qui affiche une répartition par groupe de fonctionnalités (par exemple, Annuler, Presse-papiers, Police, Paragraphe, Styles, et ainsi de suite).
 
-8. Dans le document, notez que l’étiquette a appliqué un filigrane **CONFIDENTIEL – ProjectFalcon** en haut du document. L’étiquette Project – Falcon a été configurée exactement comme celle que vous avez créée, où le filigrane était censé apparaître en diagonale au milieu de la page. Alors pourquoi apparaît-il en haut de la page ? La réponse est que vous utilisez **Word pour le web**, qui par défaut l’affiche comme vous le voyez ici. Pour voir comment il apparaîtra à quelqu’un qui lit le document, vous devez afficher le document en **Mode Lecture**, ce que vous allez faire dès maintenant. <br/>
+9. Dans le document **Word**, tapez le texte suivant : **Test d’une étiquette de confidentialité sur un document avec des informations d’identification personnelle, en l’occurrence un numéro de sécurité sociale des USA : 111-11-1111.**
+
+10. Étant donné que vous avez activé les étiquettes de confidentialité au début de cet exercice, **Word** doit afficher un groupe **Confidentialité** sur le ruban en haut de la page. Sélectionnez la flèche vers le bas dans le groupe **Confidentialité**. Dans le menu déroulant qui s’affiche doit figurer la liste des types d’étiquettes de confidentialité. Sélectionnez **Hautement confidentiel** puis, dans le sous-menu qui s’affiche, sélectionnez **Project – Falcon**. <br/>
+
+    **Remarque :** Après 24 heures, l’étiquette que vous avez créée durant la tâche précédente apparaîtra dans le sous-menu Hautement confidentiel, à côté de l’étiquette Project - Falcon. Mais pour l’heure, vous allez utiliser l’étiquette **Project – Falcon** à la place.
+
+11. Dans le document, notez que l’étiquette a appliqué un filigrane **CONFIDENTIEL – ProjectFalcon** en haut du document. L’étiquette Project – Falcon a été configurée exactement comme celle que vous avez créée, où le filigrane était censé apparaître en diagonale au milieu de la page. Alors pourquoi apparaît-il en haut de la page ? La réponse est que vous utilisez **Word pour le web**, qui par défaut l’affiche comme vous le voyez ici. Pour voir comment il apparaîtra à quelqu’un qui lit le document, vous devez afficher le document en **Mode Lecture**, ce que vous allez faire dès maintenant. <br/>
 
     Sélectionnez l’onglet **Affichage** puis, dans le ruban Word, sélectionnez **Mode Lecture**. Notez que le filigrane apparaît en diagonale au milieu du document. C’est comme cela qu’il apparaîtra à quelqu’un lisant le document. Notez que si vous utilisez l’application de bureau Word, le filigrane sera affiché tel que désigné par l’étiquette (à savoir, dans le cas présent, exactement comme vous le voyez ici en Mode Lecture). <br/>
 
     Pour quitter le Mode Lecture, sélectionnez **Modifier le document** dans la barre de menus en haut de la page. Dans le menu déroulant qui apparaît, sélectionnez **Modifier**.
 
-9. Dans ce premier test de validation, vous allez faire en sorte que cette étiquette de confidentialité ne soit pas appliquée à ce document. L’une des options de stratégie d’étiquette exige que les utilisateurs fournissent une justification pour supprimer une étiquette ou sélectionner une étiquette de classification inférieure. Vous allez maintenant vérifier si ce paramètre fonctionne correctement. <br/>
+12. Dans ce premier test de validation, vous allez faire en sorte que cette étiquette de confidentialité ne soit pas appliquée à ce document. L’une des options de stratégie d’étiquette exige que les utilisateurs fournissent une justification pour supprimer une étiquette ou sélectionner une étiquette de classification inférieure. Vous allez maintenant vérifier si ce paramètre fonctionne correctement. <br/>
 
     Dans le groupe **Confidentialité** du ruban Word, sélectionnez la flèche vers le bas. Dans le menu déroulant qui s’affiche, notez qu’une coche apparaît en regard de **Hautement confidentiel**. Maintenez le curseur de la souris sur **Hautement confidentiel** pour afficher le sous-menu. Notez qu’une coche apparaît en regard de **Project – Falcon**. Les coches identifient l’étiquette actuellement appliquée au document.  <br/>
  
     Pour supprimer l’étiquette de ce document, sélectionnez l’étiquette **Project – Falcon** qui apparaît dans ce menu déroulant.
     
-10. Dans la fenêtre **Justification requise** qui s’affiche, sélectionnez l’option **Autre (expliquer)**. Dans le champ **Expliquez pourquoi vous modifiez cette étiquette**, entrez **Test de ce qui se produit lorsqu’une étiquette est supprimée d’un document**, puis sélectionnez **Modifier**.
+13. Dans la fenêtre **Justification requise** qui s’affiche, sélectionnez l’option **Autre (expliquer)**. Dans le champ **Expliquez pourquoi vous modifiez cette étiquette**, entrez **Test de ce qui se produit lorsqu’une étiquette est supprimée d’un document**, puis sélectionnez **Modifier**.
 
-11. Notez que le filigrane dans le document a disparu. Dans le groupe **Confidentialité** du ruban Word, sélectionnez la flèche vers le bas. Dans le menu déroulant qui s’affiche, notez que bien que **Hautement confidentiel** > **Project – Falcon** soit affiché, aucune coche n’est visible en regard. Cela indique que l’étiquette de confidentialité n’est plus appliquée à ce document.  
+14. Notez que le filigrane dans le document a disparu. Dans le groupe **Confidentialité** du ruban Word, sélectionnez la flèche vers le bas. Dans le menu déroulant qui s’affiche, notez que bien que **Hautement confidentiel** > **Project – Falcon** soit affiché, aucune coche n’est visible en regard. Cela indique que l’étiquette de confidentialité n’est plus appliquée à ce document.  
 
-12. Pour réappliquer l’étiquette de confidentialité au document, sélectionnez **Hautement confidentiel** > **Project – Falcon** dans le menu déroulant. Notez que le filigrane réapparaît dans le document.
+15. Pour réappliquer l’étiquette de confidentialité au document, sélectionnez **Hautement confidentiel** > **Project – Falcon** dans le menu déroulant. Notez que le filigrane réapparaît dans le document.
 
-13. Vous allez maintenant enregistrer le document afin de pouvoir le partager durant la tâche suivante. Un champ de nom de document qui contient une flèche déroulante s’affiche en haut à gauche de la page, à droite de l’icône Word (Word est susceptible d’afficher **Document** ou **Document1** comme nom de fichier temporaire). Sélectionnez la flèche déroulante. Dans le menu déroulant qui s’affiche, confirmez que l’**Emplacement** du fichier indique **Holly Dickson > Documents**. <br/>
+16. Vous allez maintenant enregistrer le document afin de pouvoir le partager durant la tâche suivante. Un champ de nom de document qui contient une flèche déroulante s’affiche en haut à gauche de la page, à droite de l’icône Word (Word est susceptible d’afficher **Document** ou **Document1** comme nom de fichier temporaire). Sélectionnez la flèche déroulante. Dans le menu déroulant qui s’affiche, confirmez que l’**Emplacement** du fichier indique **Holly Dickson > Documents**. <br/>
 
     Dans le champ **Nom du fichier**, renommez le fichier **DocumentProtégé1**, puis cliquez en dehors de ce menu de nom de fichier (cliquez à l’intérieur du document). Notez que le nouveau nom affecté au fichier apparaît dans la barre de titre. 
 
-14. Laissez l’onglet **DocumentProtégé1** ouvert, avec le document affiché. Vous reviendrez à ce document durant la tâche suivante afin de le partager avec Joni Sherman.
+17. Laissez l’onglet **DocumentProtégé1** ouvert, avec le document affiché. Vous reviendrez à ce document durant la tâche suivante afin de le partager avec Joni Sherman.
 
-Vous venez de créer un document Word contenant la stratégie d’étiquette Hautement confidentiel intitulée Project – Falcon. 
+Vous venez de créer un document Word contenant l’étiquette Hautement confidentielle intitulée **Project – Falcon**. 
+
 
 ### Tâche 4 : Protéger un document à l’aide de Microsoft Entra ID Protection
 
@@ -279,7 +286,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
 20. Dans la fenêtre **Se connecter**, entrez **JoniS@xxxxxZZZZZZ.onmicrosoft** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo), puis sélectionnez **Suivant**.
 
-21. Dans la fenêtre **Entrer le mot de passe**, entrez le même **Mot de passe d’administration** que celui fourni par votre fournisseur d’hébergement de labo pour le compte d’administrateur du locataire (c’est-à-dire le compte Administrateur MOD), puis sélectionnez **Se connecter**.
+21. Dans la fenêtre **Entrer un mot de passe**, entrez le **mot de passe utilisateur** fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**. Si nécessaire, complétez le processus de connexion MFA.
 
 22. Si une fenêtre **Bienvenue** s’affiche, sélectionnez le X pour la fermer.
 
@@ -335,5 +342,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
     **Remarque :**  Lors de cette tâche, vous avez vérifié que Microsoft Entra ID Protection protégeait le document en fonction des paramètres de stratégie d’informations d'identification personnelle que vous aviez configurés. Lorsque Joni disposait de l’autorisation Affichage uniquement, le document s’ouvrait en Mode Lecture et elle ne pouvait pas le modifier. Lorsque l’autorisation Modifier a été octroyée à Joni, le document s’est ouvert dans Word et elle a pu le modifier. Et comme Holly n’a pas partagé le document avec vous, vous n’avez pas pu l’ouvrir quand elle l’a envoyé dans un e-mail à votre boîte aux lettres personnelle. 
 
+## Fin du labo 3
 
-## Félicitations ! Vous venez de terminer le dernier labo de ce cours.
+
+# Félicitations ! Vous venez de terminer le dernier labo de ce cours.

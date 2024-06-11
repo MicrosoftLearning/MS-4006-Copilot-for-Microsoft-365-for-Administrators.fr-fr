@@ -75,7 +75,7 @@ Lors de la tâche précédente, vous avez attribué un rôle Administrateur dire
 
 20. Pour vérifier que Lynne a hérité des rôles qui ont été attribués au groupe de rôles de gestion des utilisateurs, sélectionnez **Lynne Robbins** dans la liste des utilisateurs actifs. 
 
-21. Dans le volet **Lynne Robbins** qui s’affiche, sous l’onglet **Compte** affiché par défaut, vous devez voir les trois rôles de gestion des utilisateurs qui ont été attribués à Lynne. Dans la section **Rôles****, sélectionnez **Gérer les rôles**.
+21. Dans le volet **Lynne Robbins** qui s’affiche, sous l’onglet **Compte** affiché par défaut, vous devez voir les trois rôles de gestion des utilisateurs qui ont été attribués à Lynne. Dans la section **Rôles**, sélectionnez **Gérer les rôles**.
 
 22. Dans le volet **Gérer les rôles Administrateur** qui s’affiche, sous l’option **Accès au Centre d’administration**, notez les trois rôles sélectionnés et le nom du groupe à partir duquel ils ont été attribués à Lynne. Notez également que les trois rôles sont grisés. Cela indique que vous ne pouvez pas les désélectionner dans cette fenêtre. Étant donné que ces rôles ont été attribués à Lynne à partir d’un groupe de rôles qui les contenait, vous ne pouvez annuler l’attribution des rôles qu’en supprimant l’appartenance de Lynne au groupe de rôles. Vous venez de vérifier que ces rôles étaient attribués à Lynne. Fermez ce volet **Gérer les rôles Administrateur**.
 
@@ -212,7 +212,11 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 11. Dans votre navigateur **Edge**, accédez à **https://portal.office.com**. 
 
-12. Vous commencerez par vous connecter à Microsoft 365 en tant que **Joni Sherman**. Dans la fenêtre **Se connecter**, entrez **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo). Dans la fenêtre **Entrer le mot de passe**, entrez le même **Mot de passe de locataire Microsoft 365** que celui fourni par votre fournisseur d’hébergement de labo pour le compte d’administrateur du locataire (c’est-à-dire le compte Administrateur MOD).
+12. Vous commencerez par vous connecter à Microsoft 365 en tant que **Joni Sherman**. Dans la fenêtre **Se connecter**, entrez **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo). <br/>
+
+    **Important :** Votre fournisseur d’hébergement de laboratoire a affecté un **mot de passe administratif** au compte Administrateur MOD, et vous avez affecté ce même **mot de passe administratif** au compte d’Holly Dickson lors de sa création. Toutefois, votre fournisseur d’hébergement de labo a affecté un autre **mot de passe utilisateur** à tous les autres comptes d’utilisateur prédéfinis. À l’avenir, lorsque vous vous connectez en tant qu’utilisateur autre que l’administrateur MOD ou Holly Dickson, vous devez entrer ce **mot de passe utilisateur** et non pas le **mot de passe administratif**. <br/>
+
+    Étant donné que vous vous connectez en tant que Joni Sherman, entrez ce **mot de passe utilisateur** dans la fenêtre **Entrer le mot de passe**. Si nécessaire, complétez le processus de connexion MFA.
 
 13. Dans la fenêtre **Rester connecté ?**, cochez la case **Ne plus afficher**, puis sélectionnez **Oui**. Si une fenêtre **Enregistrer le mot de passe** s’affiche, sélectionnez **Jamais**.
 
@@ -224,7 +228,9 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 17. Vous allez maintenant vous déconnecter de Microsoft 365 en tant que Joni. Dans **Microsoft Edge**, en haut à droite de la page **Bienvenue dans Microsoft 365**, sélectionnez l’icône d’utilisateur pour **Joni Sherman** (le cercle en haut à droite contenant l’image de Joni) et, dans la fenêtre **Joni Sherman** qui s’affiche, sélectionnez **Se déconnecter**. 
 
-18. Vous allez maintenant vous reconnecter à Microsoft 365 en tant que **Lynne Robbins**. Votre onglet de navigateur **Edge** actif doit afficher un message indiquant **Joni, vous êtes maintenant déconnecté(e)**. Dans cette fenêtre, vous avez le choix entre vous reconnecter en tant que Joni ou vous connecter en tant qu’un autre utilisateur. Sélectionnez **Basculer vers un autre compte** puis, dans le champ **Adresse e-mail** qui s’affiche, entrez ****LynneR@xxxxxZZZZZZ.onmicrosoft.com (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo), puis sélectionnez **Se connecter**. Dans la fenêtre **Entrer le mot de passe**, entrez le même **Mot de passe de locataire Microsoft 365** que celui fourni par votre fournisseur d’hébergement de labo pour le compte d’administrateur du locataire (c’est-à-dire le compte Administrateur MOD).
+18. Vous allez maintenant vous reconnecter à Microsoft 365 en tant que **Lynne Robbins**. Votre onglet de navigateur **Edge** actif doit afficher un message indiquant **Joni, vous êtes maintenant déconnecté(e)**. Dans cette fenêtre, vous avez le choix entre vous reconnecter en tant que Joni ou vous connecter en tant qu’un autre utilisateur. <br/>
+
+    Sélectionnez **Basculer vers un autre compte** puis, dans le champ **Adresse e-mail** qui s’affiche, entrez ****LynneR@xxxxxZZZZZZ.onmicrosoft.com (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo), puis sélectionnez **Se connecter**. Dans la fenêtre **Entrer un mot de passe**, entrez le **mot de passe utilisateur** fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**. Si nécessaire, complétez le processus de connexion MFA. 
 
 19. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche, sélectionnez deux fois la flèche vers l’avant (>), puis cochez la case pour fermer la fenêtre.
 
@@ -288,7 +294,7 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 43. En guise de meilleure pratique, fermez tous vos onglets de navigateur sauf **Se déconnecter** une fois que vous êtes déconnecté. Sous l’onglet **Se déconnecter**, accédez à **https://portal.office.com**. 
 
-44. Dans la fenêtre **Choisir un compte**, sélectionnez **Utiliser un autre compte**. Dans la fenêtre **Se connecter**, entrez **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo). Dans la fenêtre **Entrer le mot de passe**, entrez le même **Mot de passe de locataire Microsoft 365** que celui fourni par votre fournisseur d’hébergement de labo pour le compte d’administrateur du locataire (c’est-à-dire le compte Administrateur MOD).  <br/>
+44. Dans la fenêtre **Choisir un compte**, sélectionnez **Utiliser un autre compte**. Dans la fenêtre **Se connecter**, entrez **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo). Dans la fenêtre **Entrer le mot de passe**, entrez le **mot de passe utilisateur** fourni par votre fournisseur d’hébergement de labo.  <br/>
 
     La fenêtre **Choisir un compte** doit apparaître et afficher un message d’erreur indiquant que **Votre compte a été verrouillé. Contactez votre support technique pour le déverrouiller, puis réessayez.** Vous venez de vérifier qu’Alex (ou quelqu’un ayant obtenu le nom d’utilisateur et le mot de passe d’Alex) ne pouvait pas se connecter. <br/>
 
