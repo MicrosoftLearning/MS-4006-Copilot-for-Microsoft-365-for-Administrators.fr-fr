@@ -183,7 +183,7 @@ Au lieu de cela, vous allez tester l’une des étiquettes de confidentialité p
 
 1. Sur LON-CL1, dans votre navigateur Edge, vous devez toujours être connecté à Microsoft 365 en tant que **Holly Dickson**.
 
-2. Vous allez d’abord passer en revue l’étiquette de confidentialité **Project-Falcon** que vous allez appliquer à un document dans cette tâche.  Dans votre navigateur Edge, vous devez toujours avoir un onglet ouvert pour le portail **Microsoft Purview** de la tâche précédente. Dans le portail **Microsoft Purview**, sous le groupe**protection des données** dans le volet de navigation gauche, sélectionnez **Étiquettes**. 
+2. Vous allez d’abord passer en revue l’étiquette de confidentialité **Project-Falcon** que vous allez appliquer à un document dans cette tâche.  Dans votre navigateur Edge, vous devez toujours avoir un onglet ouvert pour le portail **Microsoft Purview** de la tâche précédente. Dans le portail **Microsoft Purview**, sous le groupe **Protection des informations** dans le volet de navigation, sélectionnez **Étiquettes**. 
 
 3. Sur la page **Étiquettes**, dans la liste des étiquettes, sélectionnez la flèche droite (**>**) à côté de **Hautement confidentiel** pour afficher les sous-étiquettes sous cette étiquette. Cela affiche l’étiquette préexistante **Project - Falcon**.
 
@@ -244,7 +244,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
 4. Dans **Outlook sur le web**, sélectionnez **Nouveau courrier** dans le coin supérieur gauche de l’écran.
 
-5. Dans le volet de droite, entrez les informations suivantes dans le formulaire d’e-mail :
+5. Entrez les informations suivantes dans le formulaire d’e-mail :
 
     - Par : entrez **Joni**, puis sélectionnez **Joni Sherman** dans la liste des utilisateurs. 
 
