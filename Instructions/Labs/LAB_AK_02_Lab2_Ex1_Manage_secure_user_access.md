@@ -118,11 +118,11 @@ Dans une tâche précédente, vous avez créé un groupe Microsoft 365 pour les 
 
 6. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de l’écran, il n’existe aucune option pour la fermer. Au lieu de cela, à droite de la fenêtre, sélectionnez deux fois l’icône de flèche vers l’avant (**>**), puis sélectionnez l’icône de coche pour parcourir les diapositives de cette fenêtre de message. 
 
-7. Si une fenêtre **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur droit de la fenêtre pour la fermer. 
+7. Si une fenêtre **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer. 
 
 8. La page **Bienvenue dans Microsoft 365** s’affiche dans votre navigateur Edge sous l’onglet **Accueil | Microsoft 365**. Il s’agit de la page d’accueil Microsoft 365 d’Holly. Notez que les initiales d’Holly apparaissent dans le coin supérieur droit de l’écran ; en revanche, son nom n’est pas affiché. Cela est dû au fait que le compte d’Holly n’existait pas au moment où vous avez ajouté les utilisateurs du projet pilote Microsoft 365 au groupe associé au thème personnalisé dans l’exercice de labo précédent. Étant donné qu’Holly souhaite voir son nom en haut de chaque fenêtre Microsoft 365 lorsqu’elle est connectée au système, elle souhaite d’abord ajouter son compte au groupe d’utilisateurs du projet pilote Microsoft 365. <br>
 
-    Dans la colonne des icônes d’application sur le côté gauche de l’écran, sélectionnez **Administrateur**. Cela ouvre le **Centre d’administration Microsoft 365** dans un nouvel onglet de navigateur. 
+    Dans la colonne des icônes d’application dans le volet de navigation sur le côté de l’écran, sélectionnez **Administrateur**. Cela ouvre le **Centre d’administration Microsoft 365** dans un nouvel onglet de navigateur. 
 
 9. Dans le **Centre d’administration Microsoft 365**, sélectionnez **Équipes + groupes** dans le volet de navigation et, en dessous, sélectionnez **Équipes et groupes actifs**. 
 
@@ -130,7 +130,7 @@ Dans une tâche précédente, vous avez créé un groupe Microsoft 365 pour les 
 
 11. Dans le volet **Projet pilote M365** qui s’affiche, l’onglet **Général** est affiché par défaut. Sélectionnez l’onglet **Appartenance**.
 
-12. Sous l’onglet **Appartenance**, le sous-onglet **Propriétaires** s’affiche par défaut dans le volet de navigation sur le côté gauche du volet. Sélectionnez le sous-onglet **Membres** qui apparaît en dessous.
+12. Sous l’onglet **Appartenance**, le sous-onglet **Propriétaires** s’affiche par défaut dans le volet de navigation sur le côté du volet. Sélectionnez le sous-onglet **Membres** qui apparaît en dessous.
 
 13. Dans le sous-onglet **Membres**, sélectionnez **+Ajouter des membres**.
 
@@ -256,17 +256,17 @@ Le Directeur technique tient beaucoup à l’implémentation du verrouillage int
 
 3. Sur LON-DC1, le **Gestionnaire de serveur** est lancé automatiquement au démarrage. Dans le **Gestionnaire de serveur**, sélectionnez **Outils** dans la barre de menus en haut à droite puis, dans le menu déroulant, sélectionnez **Gestion des stratégies de groupe**. Agrandissez la fenêtre **Gestion des stratégies de groupe** qui s’affiche.
 
-4. Vous souhaitez modifier la stratégie de groupe qui inclut la stratégie de verrouillage de compte de votre organisation. Si nécessaire, dans l’arborescence de la console racine dans le volet gauche, développez **Forest:Adatum.com**, **Domaines**, puis **Adatum.com**.  <br/>
+4. Vous souhaitez modifier la stratégie de groupe qui inclut la stratégie de verrouillage de compte de votre organisation. Si nécessaire, dans l’arborescence de la console racine dans le volet latéral, développez **Forest:Adatum.com**, **Domaines**, puis **Adatum.com**.  <br/>
 
     Sous **Adatum.com**, cliquez avec le bouton droit sur **Stratégie de domaine** par défaut, puis sélectionnez **Modifier** dans le menu.
 
 5. Agrandissez la fenêtre **Éditeur de gestion des stratégies de groupe** qui s’affiche.
 
-6. Dans l’arborescence **Stratégie de domaine par défaut** dans le volet gauche, sous **Configuration ordinateur**, développez **Stratégies**, **Paramètres Windows**, **Paramètres de sécurité**, puis **Stratégies de compte**.
+6. Dans l’arborescence **Domaine par défaut Azure Policy** dans le volet latéral, sous **Configuration ordinateur**, développez **Stratégies**, **Paramètres Windows**, **Paramètres de sécurité**, puis **Stratégies de compte**.
 
 7. Dans le dossier **Stratégies de compte**, sélectionnez **Stratégie de verrouillage de compte**.
 
-8. Comme vous pouvez le voir dans le volet droit, aucun des paramètres de verrouillage intelligent n’a été défini. Au lieu de tenir à jour ces paramètres de verrouillage dans l’Éditeur de gestion des stratégies de groupe, vous allez utiliser le Centre d’administration Microsoft Entra. Bien que vous puissiez utiliser l’Éditeur de gestion des stratégies de groupe, cette méthode est généralement utilisée dans les environnements Active Directory locaux. Nous vous avons montré cet éditeur afin que vous sachiez que cette alternative existe. Toutefois, pour les organisations qui utilisent strictement des services cloud tels que Microsoft 365 ou qui trouvent l’utilisation du centre d’administration Microsoft Entra beaucoup plus conviviale que l’accès à l’Éditeur de gestion des stratégies de groupe, l’utilisation du **centre d’administration Microsoft Entra** pour attribuer des valeurs correspondantes dans le contexte Entra ID est préférable. <br/>  
+8. Comme vous pouvez le voir dans le volet qui s’affiche, aucun des paramètres de verrouillage intelligent n’a été défini. Au lieu de tenir à jour ces paramètres de verrouillage dans l’Éditeur de gestion des stratégies de groupe, vous allez utiliser le Centre d’administration Microsoft Entra. Bien que vous puissiez utiliser l’Éditeur de gestion des stratégies de groupe, cette méthode est généralement utilisée dans les environnements Active Directory locaux. Nous vous avons montré cet éditeur afin que vous sachiez que cette alternative existe. Toutefois, pour les organisations qui utilisent strictement des services cloud tels que Microsoft 365 ou qui trouvent l’utilisation du centre d’administration Microsoft Entra beaucoup plus conviviale que l’accès à l’Éditeur de gestion des stratégies de groupe, l’utilisation du **centre d’administration Microsoft Entra** pour attribuer des valeurs correspondantes dans le contexte Entra ID est préférable. <br/>  
 
     Sachez également que le comportement de verrouillage et les options de personnalisation diffèrent entre les deux méthodes. Avec l’Éditeur de gestion des stratégies de groupe, vous avez un contrôle plus précis sur les paramètres de stratégie, notamment Seuil de verrouillage, Durée du verrouillage et Réinitialiser le compteur de verrouillage du compte au bout de. Toutefois, l’application de cette méthode nécessite une connaissance de la stratégie de groupe et de l’administration Active Directory. À l’inverse, la stratégie de verrouillage de compte dans Microsoft Entra ne peut pas être personnalisée de manière aussi étendue. En revanche, elle est plus facile à utiliser, même si elle n’offre pas certaines des options de réglage fin disponibles dans Stratégie de groupe. <br/>
 
@@ -282,9 +282,9 @@ Le Directeur technique tient beaucoup à l’implémentation du verrouillage int
 
 13. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de l’écran, il n’existe aucune option pour la fermer. Au lieu de cela, à droite de la fenêtre, sélectionnez deux fois l’icône de flèche vers l’avant (**>**), puis sélectionnez l’icône de coche pour parcourir les diapositives de cette fenêtre de message. 
 
-14. Si une fenêtre **Rechercher d’autres applications** ou **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur droit de la fenêtre pour la fermer. 
+14. Si une fenêtre **Rechercher d’autres applications** ou **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer. 
 
-15. Dans la page **Bienvenue dans Microsoft 365**, dans la liste des icônes d’application qui s’affiche dans le volet gauche, sélectionnez **Administrateur**. Cela ouvre le **Centre d’administration Microsoft 365** dans un nouvel onglet de navigateur. 
+15. Dans la page **Bienvenue dans Microsoft 365**, dans la liste des icônes d’application qui s’affiche dans le volet de fenêtre latéral, sélectionnez **Administrateur**. Cela ouvre le **Centre d’administration Microsoft 365** dans un nouvel onglet de navigateur. 
 
 16. Dans le **centre d’administration Microsoft 365**, dans le volet de navigation, sélectionnez **Afficher tout**. Sous **Centres d’administration**, sélectionnez **Identité** afin d’afficher le **Centre d’administration Microsoft Entra** dans un nouvel onglet.
 

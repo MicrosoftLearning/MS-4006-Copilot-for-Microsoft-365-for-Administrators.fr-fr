@@ -42,13 +42,13 @@ Tout au long des labos de ce cours, vous allez jouer le rôle du personnage nomm
 
 8. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de l’écran, il n’existe aucune option pour la fermer. Au lieu de cela, à droite de la fenêtre, sélectionnez deux fois l’icône de flèche vers l’avant (**>**), puis sélectionnez l’icône de coche pour parcourir les diapositives de cette fenêtre de message. 
 
-9. Si une fenêtre **Rechercher d’autres applications** ou **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur droit de la fenêtre pour la fermer. 
+9. Si une fenêtre **Rechercher d’autres applications** ou **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer. 
 
 10. La page **Bienvenue dans Microsoft 365** s’affiche dans votre navigateur Edge sous l’onglet **Accueil | Microsoft 365**. Il s’agit de la page d’accueil Microsoft 365 de l’Administrateur MOD. <br/>
 
     Notez que l’icône s’affiche dans le coin supérieur droit de l’écran. Cette icône représente le compte **Administrateur MOD**, qui est le compte administrateur de locataire créé par le fournisseur d’hébergement de votre labo, au nom duquel vous venez de vous connecter. Les autres comptes d’utilisateur Microsoft 365 existants créés par le fournisseur d’hébergement de votre labo ont une image associée à chacun de leur compte. Par conséquent, lorsque vous vous connectez comme l’un de ces utilisateurs dans des labos ultérieurs, l’image de l’utilisateur s’affiche au lieu des initiales de l’utilisateur. Toutefois, quand un utilisateur comme l’Administrateur MOD n’y a aucune image associée, les initiales de l’utilisateur s’affichent au lieu de l’image ou, comme dans ce cas, une icône ayant été attribuée au compte. <br/>
 
-    Dans la page **Bienvenue dans Microsoft 365**, dans la liste des icônes d’application qui s’affiche dans le volet gauche, sélectionnez **Administrateur**. Cela ouvre le **Centre d’administration Microsoft 365** dans un nouvel onglet de navigateur. 
+    Dans la page **Bienvenue dans Microsoft 365**, dans la liste des icônes d’application qui s’affiche dans le volet de navigation, sélectionnez **Administrateur**. Cela ouvre le **Centre d’administration Microsoft 365** dans un nouvel onglet de navigateur. 
 
 11. Dans le **Centre d’administration Microsoft 365**, sélectionnez **Tout afficher** dans le volet de navigation, puis **Sécurité**. Dans le groupe **Paramètres**, sélectionnez **Paramètres de l’organisation**. 
 
@@ -76,7 +76,7 @@ Tout au long des labos de ce cours, vous allez jouer le rôle du personnage nomm
 
 15. Sélectionnez **Enregistrer**.
 
-16. En haut du volet **Informations de l’organisation**, notez le message indiquant que les modifications ont été enregistrées. Sélectionnez le **X** dans le coin supérieur droit pour fermer le volet.
+16. En haut du volet **Informations de l’organisation**, notez le message indiquant que les modifications ont été enregistrées. Sélectionnez le **X** dans le coin supérieur du volet pour le fermer.
 
 17. Restez connecté à **LON-CL1** avec Microsoft Edge ouvert dans le **Centre d’administration Microsoft 365** pour la tâche suivante.
 

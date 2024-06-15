@@ -11,7 +11,7 @@ Le rôle Administrateur général Microsoft 365 a été octroyé à Holly Dicks
 
     Basculez vers **LON-CL1**. 
 
-2. Sur **LON-CL1**, dans le **Centre d’administration Microsoft 365** dans votre navigateur Edge, vous devriez toujours être connecté en tant qu’Holly Dickson suite à un exercice de labo précédent. Dans le volet de navigation gauche, sélectionnez **Utilisateurs**, puis **Utilisateurs actifs**. 
+2. Sur **LON-CL1**, dans le **Centre d’administration Microsoft 365** dans votre navigateur Edge, vous devriez toujours être connecté en tant qu’Holly Dickson suite à un exercice de labo précédent. Dans le volet de navigation, sélectionnez **Utilisateurs**, puis **Utilisateurs actifs**. 
 
 3. Dans la liste **Utilisateurs actifs**, sélectionnez **Diego Siciliani**.  <br/>
 
@@ -222,11 +222,11 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 14. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de la page, sélectionnez deux fois la flèche vers l’avant (>), puis la coche pour fermer la boîte de dialogue.
 
-15. Si une fenêtre **Rechercher d’autres applications** s’affiche, sélectionnez le **X** dans le coin supérieur droit de la fenêtre pour la fermer.
+15. Si une fenêtre **Rechercher d’autres applications** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer.
 
 16. Dans la fenêtre **Bienvenue dans Microsoft 365**, qui est la page d’accueil Microsoft 365 de Joni, un volet de navigation sur le côté gauche de l’écran indique les applications auxquelles l’utilisateur est autorisé à accéder. Dans ce volet **Applications**, notez que l’option **Administrateur** n’est pas affichée. Cela est dû au fait que Joni n’a jamais été affecté à un rôle Administrateur Microsoft 365. 
 
-17. Vous allez maintenant vous déconnecter de Microsoft 365 en tant que Joni. Dans **Microsoft Edge**, en haut à droite de la page **Bienvenue dans Microsoft 365**, sélectionnez l’icône d’utilisateur pour **Joni Sherman** (le cercle en haut à droite contenant l’image de Joni) et, dans la fenêtre **Joni Sherman** qui s’affiche, sélectionnez **Se déconnecter**. 
+17. Vous allez maintenant vous déconnecter de Microsoft 365 en tant que Joni. Dans **Microsoft Edge**, en haut à droite de la page **Bienvenue dans Microsoft 365**, sélectionnez l’icône d’utilisateur pour **Joni Sherman** (le cercle dans le coin supérieur avec la photo de Joni), et dans la fenêtre **Joni Sherman** qui s’affiche, sélectionnez **Se déconnecter**. 
 
 18. Vous allez maintenant vous reconnecter à Microsoft 365 en tant que **Lynne Robbins**. Votre onglet de navigateur **Edge** actif doit afficher un message indiquant **Joni, vous êtes maintenant déconnecté(e)**. Dans cette fenêtre, vous avez le choix entre vous reconnecter en tant que Joni ou vous connecter en tant qu’un autre utilisateur. <br/>
 
@@ -234,7 +234,7 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 19. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche, sélectionnez deux fois la flèche vers l’avant (>), puis cochez la case pour fermer la fenêtre.
 
-20. Si une fenêtre **Rechercher d’autres applications** s’affiche, sélectionnez le **X** dans le coin supérieur droit de la fenêtre pour la fermer.
+20. Si une fenêtre **Rechercher d’autres applications** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer.
 
 21. Dans la fenêtre **Bienvenue dans Microsoft 365**, qui est la page d’accueil Microsoft 365 de Lynne, notez que l’icône **Administrateur** est visible dans le volet de navigation sur le côté gauche de l’écran. Cela est dû au fait que Lynne a été affectée à un rôle Administrateur Microsoft 365. Sélectionnez l’icône **Administrateur** pour ouvrir le Centre d’administration Microsoft 365.
 
@@ -282,7 +282,7 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 39. Dans le volet **Bloquer la connexion** qui s’affiche, vérifiez que l’adresse e-mail d’Alex apparaît sous le titre **Bloquer la connexion**. Cochez la case **Empêcher cet utilisateur de se connecter**, puis sélectionnez **Enregistrer les modifications.** 
 
-40. La fenêtre **Bloquer la connexion** doit afficher un message indiquant qu’Alex ne peut désormais plus se connecter (et personne ne peut se connecter avec le nom d’utilisateur d’Alex si son nom d’utilisateur a réellement été compromis). En outre, Alex sera automatiquement déconnecté des services Microsoft dans les 60 minutes qui suivent. Sélectionnez le **X** dans le coin supérieur droit du volet pour le fermer. 
+40. La fenêtre **Bloquer la connexion** doit afficher un message indiquant qu’Alex ne peut désormais plus se connecter (et personne ne peut se connecter avec le nom d’utilisateur d’Alex si son nom d’utilisateur a réellement été compromis). En outre, Alex sera automatiquement déconnecté des services Microsoft dans les 60 minutes qui suivent. Sélectionnez le **X** dans le coin supérieur du volet pour le fermer. 
 
 41. Lynne vient d’être informée que le nom d’utilisateur de **Nestor Wilke** avait peut-être également été compromis. Répétez les étapes 33 à 36 pour empêcher Nestor de se connecter (et pour empêcher toute autre personne d’utiliser son nom d’utilisateur pour se connecter). <br/>
 
@@ -290,7 +290,7 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
     Fermez le volet **Bloquer la connexion**.
 
-42. Vous avez précédemment fait en sorte qu’Alex Wilber ne puisse plus se connecter. Pour vérifier que le blocage est bien en vigueur, vous allez tenter de vous connecter en tant qu’Alex. Déconnectez-vous de Microsoft 365 en sélectionnant l’icône d’utilisateur pour **Lynne Robbins** (le cercle contenant l’image de Lynne dans le coin supérieur droit) et, dans la fenêtre **Lynne Robbins** qui s’affiche, sélectionnez **Se déconnecter**. 
+42. Vous avez précédemment fait en sorte qu’Alex Wilber ne puisse plus se connecter. Pour vérifier que le blocage est bien en vigueur, vous allez tenter de vous connecter en tant qu’Alex. Déconnectez-vous de Microsoft 365 en sélectionnant l’icône d’utilisateur pour **Lynne Robbins** (le cercle contenant l’image de Lynne dans le coin supérieur) et, dans la fenêtre **Lynne Robbins** qui s’affiche, sélectionnez **Se déconnecter**. 
 
 43. En guise de meilleure pratique, fermez tous vos onglets de navigateur sauf **Se déconnecter** une fois que vous êtes déconnecté. Sous l’onglet **Se déconnecter**, accédez à **https://portal.office.com**. 
 
