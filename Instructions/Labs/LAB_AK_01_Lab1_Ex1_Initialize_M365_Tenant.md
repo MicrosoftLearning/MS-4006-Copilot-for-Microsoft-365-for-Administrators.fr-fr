@@ -22,41 +22,56 @@ Vous allez vous connecter au Client 1 PC (LON-CL1) en utilisant le compte Adatum
 
 ### Tâche 1 : configurer un profil d’organisation pour Adatum
 
-Tout au long des labos de ce cours, vous allez jouer le rôle du personnage nommé Holly Dickson, l’administrateur Microsoft 365 d’Adatum. Dans le cadre de votre rôle en tant qu’Holly, vous vous chargez de la configuration du profil de l’entreprise pour son locataire d’évaluation gratuite Microsoft 365. Dans cette tâche, vous allez configurer les options nécessaires pour un locataire d’Adatum. Étant donné qu’Holly n’a pas encore créé de compte d’utilisateur personnel Microsoft 365 pour elle-même (vous l’effectuerez dans l’exercice de labo suivant), Holly se connecte initialement à Microsoft 365 en utilisant le compte administrateur de locataire et le mot de passe Microsoft 365 par défaut créés par le fournisseur d’hébergement de votre labo. Ce compte constitue le compte **Administrateur MOD** dont l’alias est « admin ». Le nom d’utilisateur pour ce compte est **admin@xxxxxZZZZZZ.onmicrosoft.com** (où xxxxxZZZZZZ est le préfixe de locataire attribué par le fournisseur d’hébergement de votre labo). Le nom d’affichage pour ce compte est Administrateur MOD.
+Tout au long des labos de ce cours, vous allez jouer le rôle du personnage nommé Holly Dickson, l’administrateur Microsoft 365 d’Adatum. Dans le cadre de votre rôle en tant qu’Holly, vous vous chargez de la configuration du profil de l’entreprise pour son locataire d’évaluation gratuite Microsoft 365. Dans cette tâche, vous allez configurer les options nécessaires pour un locataire d’Adatum. Étant donné qu’Holly n’a pas encore créé de compte d’utilisateur personnel Microsoft 365 pour elle-même (vous l’effectuerez dans l’exercice de labo suivant), Holly se connecte initialement à Microsoft 365 en utilisant le compte administrateur de locataire et le mot de passe Microsoft 365 par défaut créés par le fournisseur d’hébergement de votre labo. Ce compte constitue le compte Administrateur MOD dont l’alias est « admin ». Le nom d’utilisateur pour ce compte est admin@xxxxxZZZZZZ.onmicrosoft.com (où xxxxxZZZZZZ est le préfixe de locataire attribué par le fournisseur d’hébergement de votre labo). Le nom d’affichage pour ce compte est Administrateur MOD.
 
-1. Lorsque vous ouvrez l’environnement de machine virtuelle du fournisseur d’hébergement de votre labo, vous devez commencer par la Machine virtuelle Client 1 (LON-CL1). Si votre environnement de machine virtuelle s’ouvre avec l’une des autres machines (telle que LON-DC1), basculez maintenant vers **LON-CL1**.
+1. Votre fournisseur d’hébergement de laboratoire fournit deux mots de passe utilisés avec les comptes d’utilisateur fictifs dans votre locataire d’évaluation Microsoft 365. Le compte Administrateur MOD, qui est l’administrateur de locataire par défaut, a reçu le **mot de passe d’administration**. Tous les autres utilisateurs , même ceux affectés à un rôle d’administrateur, ont été affectés au **mot de passe de l’utilisateur**. <br>
 
-2. Connectez-vous à **LON-CL1** en tant que le compte **Administrateur** local créé par le fournisseur d’hébergement de votre labo avec le mot de passe **Pa55w.rd**. 
+    À des fins de sécurité, Microsoft a configuré votre locataire d’évaluation afin que tous les utilisateurs prédéfinis puissent modifier leur mot de passe lors de leur prochaine connexion. Certains fournisseurs d’hébergement de laboratoire peuvent fournir deux nouveaux champs de mot de passe, un pour les administrateurs (en fait, l’administrateur MOD et Holly Dickson) et l’un pour tous les autres utilisateurs. Si ces deux nouveaux champs de mot de passe apparaissent dans votre machine virtuelle, entrez un nouveau mot de passe pour chacun d’eux. Ces nouvelles valeurs de mot de passe seront stockées dans la machine virtuelle et affichées dans les instructions du labo. <br>
+ 
+    D’autres fournisseurs d’hébergement de laboratoire peuvent ne pas fournir ces nouveaux champs de mot de passe. Pour ces environnements, vous devez écrire manuellement le nouveau mot de passe que vous prévoyez d’affecter aux utilisateurs qui se connectent. <br>
 
-3. Dans la barre des tâches en bas de votre écran, sélectionnez l’icône **Microsoft Edge**. Si nécessaire, agrandissez la fenêtre de votre navigateur quand elle s’ouvre.
+    Lorsque vous concevez vos nouveaux mots de passe, gardez à l’esprit les instructions de mot de passe de Microsoft : <br>
 
-4. Dans votre navigateur Edge, accédez à la page **Accueil Microsoft 365** en entrant l’URL suivante dans la barre d’adresse : **https://portal.office.com** 
+    - Longueur minimale de 8 caractères, avec au moins :
+       - 1 caractère majuscule
+       - 1 caractère minuscule
+       - 1 caractère spécial. Les mots de passe ne seront pas validés par rapport aux exigences de Microsoft tant que vous ne modifiez pas l’ancien mot de passe lors de la prochaine connexion de l’utilisateur.
 
-5. Dans la boîte de dialogue **Se connecter** qui s’affiche, entrez le **Nom d’utilisateur administratif** fourni par le fournisseur d’hébergement de votre labo (il s’agit du compte Administrateur MOD). Le nom d’utilisateur doit se présenter sous la forme **admin@xxxxxZZZZZZ.onmicrosoft.com**, où xxxxxZZZZZZ est le préfixe de locataire attribué par le fournisseur d’hébergement de votre labo. Cliquez sur **Suivant**. <br/>
+2. Lorsque vous ouvrez l’environnement de machine virtuelle du fournisseur d’hébergement de votre labo, vous devez commencer par la Machine virtuelle Client 1 (LON-CL1). Si votre environnement de machine virtuelle s’ouvre avec l’une des autres machines (telle que LON-DC1), basculez maintenant vers **LON-CL1**.
+
+3. Connectez-vous à **LON-CL1** en tant que le compte **Administrateur** local créé par le fournisseur d’hébergement de votre labo avec le mot de passe **Pa55w.rd**. 
+
+4. Dans la barre des tâches en bas de votre écran, sélectionnez l’icône **Microsoft Edge**. Si nécessaire, agrandissez la fenêtre de votre navigateur quand elle s’ouvre.
+
+5. Dans votre navigateur Edge, accédez à la page **Accueil Microsoft 365** en entrant l’URL suivante dans la barre d’adresse : **https://portal.office.com** 
+
+6. Dans la boîte de dialogue **Se connecter**, entrez le nom **d’utilisateur administratif** fourni par votre fournisseur d’hébergement lab (il s’agit du compte Administrateur MOD) de votre locataire d’évaluation Microsoft 365. Le nom d’utilisateur doit se présenter sous la forme **admin@xxxxxZZZZZZ.onmicrosoft.com**, où xxxxxZZZZZZ est le préfixe de locataire attribué par le fournisseur d’hébergement de votre labo. Cliquez sur **Suivant**. <br/>
 
     **Remarque :** Dans les instructions du labo s’affichant dans votre environnement de laboratoire de machine virtuelle, le fournisseur d’hébergement de votre labo peut offrir la possibilité de sélectionner un bouton **Saisir un texte** (ou équivalent) près des données de ressource, comme les noms d’utilisateur, les mots de passe, les commandes PowerShell et d’autres données devant être entrées pendant ces labos. D’autres fournisseurs d’hébergement de labo peuvent offrir une autre méthode, comme la possibilité de copier et de coller ces informations. Tirez parti de cette fonctionnalité pour vous éviter d’avoir à saisir manuellement ces informations. 
 
-6. Dans la boîte de dialogue **Entrer le mot de passe**, entrez le **Mot de passe d’administration** fourni par le fournisseur d’hébergement de votre labo, puis sélectionnez **Se connecter**. Si nécessaire, complétez le processus de connexion MFA.
+7. Dans la boîte de dialogue **Entrer le mot de passe**, entrez le **mot de passe d’administration** prédéfini fourni par votre fournisseur d’hébergement lab, puis sélectionnez **Se connecter**. 
 
-7. Dans la boîte de dialogue **Rester connecté ?**, cochez la case **Ne plus afficher**, puis sélectionnez **Oui**. Dans la boîte de dialogue **Enregistrer le mot de passe** qui s’affiche, sélectionnez **Jamais**.
+8. Votre fournisseur d’hébergement lab peut ou non avoir configuré le compte d’administrateur MOD pour exiger un nouveau mot de passe lors de la connexion. Si c’est le cas, une boîte de dialogue **Mettre à jour votre mot de passe** s’affiche. Si cela se produit, entrez le **mot de passe d’administration** fourni par votre fournisseur d’hébergement lab dans le champ **mot de passe actuel**, puis entrez le nouveau mot de passe d’administration dans le **nouveau mot de passe** et **confirmez le mot de passe** champs, puis sélectionnez **Se connecter**.
 
-8. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de l’écran, il n’existe aucune option pour la fermer. Au lieu de cela, à droite de la fenêtre, sélectionnez deux fois l’icône de flèche vers l’avant (**>**), puis sélectionnez l’icône de coche pour parcourir les diapositives de cette fenêtre de message. 
+9. Si une boîte de dialogue **Rester connecté ?** s’affiche, cochez la case **Ne plus afficher**, puis sélectionnez **Oui**. 
 
-9. Si une fenêtre **Rechercher d’autres applications** ou **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer. 
+10. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de l’écran, il n’existe aucune option pour la fermer. Au lieu de cela, à droite de la fenêtre, sélectionnez deux fois l’icône de flèche vers l’avant (**>**), puis sélectionnez l’icône de coche pour parcourir les diapositives de cette fenêtre de message. 
 
-10. La page **Bienvenue dans Microsoft 365** s’affiche dans votre navigateur Edge sous l’onglet **Accueil | Microsoft 365**. Il s’agit de la page d’accueil Microsoft 365 de l’Administrateur MOD. <br/>
+11. Si une boîte de dialogue **Rechercher d’autres applications** ou une boîte de dialogue **Créer avec Microsoft 365** s’affiche, sélectionnez le **X** dans le coin supérieur des zones pour les fermer. De même, si une boîte de dialogue Sing in to (Connexion) Microsoft Edge s’affiche, sélectionnez le bouton **Non merci**.
 
-    Notez que l’icône s’affiche dans le coin supérieur droit de l’écran. Cette icône représente le compte **Administrateur MOD**, qui est le compte administrateur de locataire créé par le fournisseur d’hébergement de votre labo, au nom duquel vous venez de vous connecter. Les autres comptes d’utilisateur Microsoft 365 existants créés par le fournisseur d’hébergement de votre labo ont une image associée à chacun de leur compte. Par conséquent, lorsque vous vous connectez comme l’un de ces utilisateurs dans des labos ultérieurs, l’image de l’utilisateur s’affiche au lieu des initiales de l’utilisateur. Toutefois, quand un utilisateur comme l’Administrateur MOD n’y a aucune image associée, les initiales de l’utilisateur s’affichent au lieu de l’image ou, comme dans ce cas, une icône ayant été attribuée au compte. <br/>
+12. La page **Bienvenue dans Microsoft 365** s’affiche dans votre navigateur Edge sous l’onglet **Accueil | Microsoft 365**. Il s’agit de la page d’accueil Microsoft 365 de l’Administrateur MOD. <br/>
+
+    Notez qu’une icône ou un cercle avec « MA » (initiales pour l’administrateur MOD) apparaît dans le coin supérieur droit de l’écran. Certains locataires d’évaluation affichent une icône ; d’autres montrent les initiales « MA » dans un cercle ; tout dépend du fait que votre fournisseur d’hébergement de laboratoire a ajouté une icône au compte de l’administrateur MOD. L’icône ou les initiales représentent le compte **administrateur MOD**, qui est le compte d’administrateur client créé par votre fournisseur d’hébergement lab que vous venez de vous connecter en tant que. Si l’un des comptes d’utilisateur Microsoft 365 existants créés par votre fournisseur d’hébergement lab a une image associée à son compte, l’image de l’utilisateur s’affiche plutôt que les initiales de l’utilisateur lorsque vous vous connectez à Microsoft 365 en tant qu’utilisateur. Toutefois, lorsqu’un utilisateur tel que l’administrateur MOD n’a aucune image affectée à celui-ci, les initiales de l’utilisateur sont affichées à la place de l’image, ou une icône s’affiche si un utilisateur a été affecté au compte par votre fournisseur d’hébergement lab. <br/>
 
     Dans la page **Bienvenue dans Microsoft 365**, dans la liste des icônes d’application qui s’affiche dans le volet de navigation, sélectionnez **Administrateur**. Cela ouvre le **Centre d’administration Microsoft 365** dans un nouvel onglet de navigateur. 
 
-11. Dans le **Centre d’administration Microsoft 365**, sélectionnez **Tout afficher** dans le volet de navigation, puis **Sécurité**. Dans le groupe **Paramètres**, sélectionnez **Paramètres de l’organisation**. 
+13. Dans le **Centre d’administration Microsoft 365**, sélectionnez **Tout afficher** dans le volet de navigation, puis **Sécurité**. Dans le groupe **Paramètres**, sélectionnez **Paramètres de l’organisation**. 
 
-12. Sur la page des **paramètres de l'organisation**, l'onglet **Services** s'affiche par défaut. Sélectionnez l’onglet **Profil d’organisation**.
+14. Sur la page des **paramètres de l'organisation**, l'onglet **Services** s'affiche par défaut. Sélectionnez l’onglet **Profil d’organisation**.
 
-13. Sous l’onglet **Profil d’organisation**, sélectionnez **Informations de l’organisation** dans la liste des données de profil.
+15. Sous l’onglet **Profil d’organisation**, sélectionnez **Informations de l’organisation** dans la liste des données de profil.
 
-14. Dans le volet **Informations de l’organisation** qui s’affiche, entrez les informations suivantes : <br/>
+16. Dans le volet **Informations de l’organisation** qui s’affiche, entrez les informations suivantes : <br/>
 
     - Nom : **Adatum Corporation** (remarque : Adatum Corporation est une filiale de Contoso Inc. Il est possible que le locataire d’évaluation gratuite Microsoft obtenu par le fournisseur d’hébergement de votre labo pour ce labo ait été initialement attribué à Contoso. Si **Contoso** (ou toute autre valeur) s’affiche comme le nom d’organisation, remplacez-le par **Adatum Corporation**).
 
@@ -74,11 +89,11 @@ Tout au long des labos de ce cours, vous allez jouer le rôle du personnage nomm
 
     - Langue préférée : **Anglais**
 
-15. Sélectionnez **Enregistrer**.
+17. Sélectionnez **Enregistrer**.
 
-16. En haut du volet **Informations de l’organisation**, notez le message indiquant que les modifications ont été enregistrées. Sélectionnez le **X** dans le coin supérieur du volet pour le fermer.
+18. En haut du volet **Informations de l’organisation**, notez le message indiquant que les modifications ont été enregistrées. Sélectionnez le **X** dans le coin supérieur du volet pour le fermer.
 
-17. Restez connecté à **LON-CL1** avec Microsoft Edge ouvert dans le **Centre d’administration Microsoft 365** pour la tâche suivante.
+19. Restez connecté à **LON-CL1** avec Microsoft Edge ouvert dans le **Centre d’administration Microsoft 365** pour la tâche suivante.
 
 ### Tâche 2 : créer un thème personnalisé pour une équipe du projet pilote d’Adatum
 
