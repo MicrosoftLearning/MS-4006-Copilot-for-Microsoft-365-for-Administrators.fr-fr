@@ -212,31 +212,31 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 11. Dans votre navigateur **Edge**, accédez à **https://portal.office.com**. 
 
-12. Vous commencerez par vous connecter à Microsoft 365 en tant que **Joni Sherman**. Dans la fenêtre **Se connecter**, entrez **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo). <br/>
+12. Vous commencerez par vous connecter à Microsoft 365 en tant que **Joni Sherman**. Dans la fenêtre **Se connecter**, entrez **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo). Étant donné que vous vous connectez en tant que Joni Sherman, entrez ce **Mot de passe de l'utilisateur** fourni par votre fournisseur d’hébergement de laboratoire dans la fenêtre **Entrer le mot de passe**. <br>
 
-    **Important :** Votre fournisseur d’hébergement de laboratoire a affecté un **mot de passe administratif** au compte Administrateur MOD, et vous avez affecté ce même **mot de passe administratif** au compte d’Holly Dickson lors de sa création. Toutefois, votre fournisseur d’hébergement de labo a affecté un autre **mot de passe utilisateur** à tous les autres comptes d’utilisateur prédéfinis. À l’avenir, lorsque vous vous connectez en tant qu’utilisateur autre que l’administrateur MOD ou Holly Dickson, vous devez entrer ce **mot de passe utilisateur** et non pas le **mot de passe administratif**. <br/>
-
-    Étant donné que vous vous connectez en tant que Joni Sherman, entrez ce **mot de passe utilisateur** dans la fenêtre **Entrer le mot de passe**. Si nécessaire, complétez le processus de connexion MFA.
+    Dans la boîte de dialogue **Mettre à jour votre mot de passe** qui s’affiche, entrez le **Mot de passe de l'utilisateur** fourni par votre fournisseur d’hébergement de labo dans le champ **Mot de passe actuel**. Entrez ensuite le nouveau Mot de passe utilisateur dans les champs **Nouveau mot de passe** et **Confirmer le mot de passe**, puis sélectionnez **Se connecter**.
 
 13. Dans la fenêtre **Rester connecté ?**, cochez la case **Ne plus afficher**, puis sélectionnez **Oui**. Si une fenêtre **Enregistrer le mot de passe** s’affiche, sélectionnez **Jamais**.
 
 14. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche au milieu de la page, sélectionnez deux fois la flèche vers l’avant (>), puis la coche pour fermer la boîte de dialogue.
 
-15. Si une fenêtre **Rechercher d’autres applications** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer.
+15. Si une fenêtre **Rechercher d’autres applications** ou une fenêtre **Créer avec Microsoft 365** ou toute autre fenêtre de type introduction s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer.
 
-16. Dans la fenêtre **Bienvenue dans Microsoft 365**, qui est la page d’accueil Microsoft 365 de Joni, un volet de navigation sur le côté gauche de l’écran indique les applications auxquelles l’utilisateur est autorisé à accéder. Dans ce volet **Applications**, notez que l’option **Administrateur** n’est pas affichée. Cela est dû au fait que Joni n’a jamais été affecté à un rôle Administrateur Microsoft 365. 
+16. Dans la fenêtre **Bienvenue dans Microsoft 365**, qui est la page d’accueil Microsoft 365 de Joni, un volet de navigation sur le côté de l’écran indique les applications auxquelles l’utilisateur est autorisé à accéder. Dans ce volet **Applications**, notez que l’option **Administrateur** n’est pas affichée. Cela est dû au fait que Joni n’a jamais été affecté à un rôle Administrateur Microsoft 365. 
 
 17. Vous allez maintenant vous déconnecter de Microsoft 365 en tant que Joni. Dans **Microsoft Edge**, en haut à droite de la page **Bienvenue dans Microsoft 365**, sélectionnez l’icône d’utilisateur pour **Joni Sherman** (le cercle dans le coin supérieur avec la photo de Joni), et dans la fenêtre **Joni Sherman** qui s’affiche, sélectionnez **Se déconnecter**. 
 
 18. Vous allez maintenant vous reconnecter à Microsoft 365 en tant que **Lynne Robbins**. Votre onglet de navigateur **Edge** actif doit afficher un message indiquant **Joni, vous êtes maintenant déconnecté(e)**. Dans cette fenêtre, vous avez le choix entre vous reconnecter en tant que Joni ou vous connecter en tant qu’un autre utilisateur. <br/>
 
-    Sélectionnez **Basculer vers un autre compte** puis, dans le champ **Adresse e-mail** qui s’affiche, entrez ****LynneR@xxxxxZZZZZZ.onmicrosoft.com (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo), puis sélectionnez **Se connecter**. Dans la fenêtre **Entrer un mot de passe**, entrez le **mot de passe utilisateur** fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**. Si nécessaire, complétez le processus de connexion MFA. 
+    Sélectionnez **Basculer vers un autre compte** puis, dans le champ **Adresse e-mail** qui s’affiche, entrez ****LynneR@xxxxxZZZZZZ.onmicrosoft.com (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo), puis sélectionnez **Se connecter**. Dans la fenêtre **Entrer un mot de passe**, entrez le **mot de passe utilisateur** fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**. <br>
+
+    Dans la boîte de dialogue **Mettre à jour votre mot de passe** qui s’affiche, entrez le **Mot de passe de l'utilisateur** fourni par votre fournisseur d’hébergement de labo dans le champ **Mot de passe actuel**. Entrez ensuite le nouveau Mot de passe utilisateur dans les champs **Nouveau mot de passe** et **Confirmer le mot de passe**, puis sélectionnez **Se connecter**. 
 
 19. Si une boîte de dialogue **Bienvenue dans Microsoft 365** s’affiche, sélectionnez deux fois la flèche vers l’avant (>), puis cochez la case pour fermer la fenêtre.
 
-20. Si une fenêtre **Rechercher d’autres applications** s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer.
+20. Si une fenêtre **Rechercher d’autres applications** ou une fenêtre **Créer avec Microsoft 365** ou toute autre fenêtre de type introduction s’affiche, sélectionnez le **X** dans le coin supérieur de la fenêtre pour la fermer.
 
-21. Dans la fenêtre **Bienvenue dans Microsoft 365**, qui est la page d’accueil Microsoft 365 de Lynne, notez que l’icône **Administrateur** est visible dans le volet de navigation sur le côté gauche de l’écran. Cela est dû au fait que Lynne a été affectée à un rôle Administrateur Microsoft 365. Sélectionnez l’icône **Administrateur** pour ouvrir le Centre d’administration Microsoft 365.
+21. Dans la fenêtre **Bienvenue dans Microsoft 365**, qui est la page d’accueil Microsoft 365 de Lynne, notez que l’icône **Administrateur** est visible dans le volet de navigation sur le côté de l’écran. Cela est dû au fait que Lynne a été affectée à un rôle Administrateur Microsoft 365. Sélectionnez l’icône **Administrateur** pour ouvrir le Centre d’administration Microsoft 365.
 
 22. Dans le **Centre d’administration Microsoft 365**, sélectionnez **Utilisateurs** dans le volet de navigation, puis **Utilisateurs actifs**. 
 
@@ -252,7 +252,7 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
     Décochez maintenant la case **Demander à cet utilisateur de modifier son mot de passe lors de sa première connexion**. Notez le message d’erreur qui s’affiche, indiquant que le mot de passe (Pa55w.rd) contient un mot, une expression ou une série de nombres qui le rend facilement détectable. En l’occurrence, vous avez entré une variante du mot **password**, ce qui déclenchera cette erreur. Le système vous autorise à entrer ce mot de passe si vous forcez l’utilisateur à le modifier lors de sa première connexion. En revanche, si vous ne forcez pas l’utilisateur à entrer un autre mot de passe lors de sa première connexion, ce mot de passe n’est pas autorisé.
 
-27. Après ces deux tentatives de mot de passe ayant échoué, Lynne a décidé de laisser Microsoft 365 générer automatiquement un mot de passe. Cochez la case **Créer automatiquement un mot de passe**. <br/>
+27. Après ces deux tentatives de mot de passe ayant échoué, Lynne a décidé de laisser Microsoft 365 générer automatiquement un mot de passe. Cochez la case **Créer automatiquement un mot de passe**. 
     
 28. Le mot de passe généré automatiquement sera uniquement un mot de passe temporaire, car Lynne souhaite forcer Diego à le modifier la prochaine fois qu’il se connectera. Par conséquent, vérifiez que la case **Demander à cet utilisateur de modifier son mot de passe lors de sa première connexion** est cochée ; si ce n’est pas le cas, cochez-la.
 
@@ -264,9 +264,9 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 32. Si une fenêtre de demande d’enquête s’affiche, sélectionnez **Annuler**.
 
-33. Dans la liste **Utilisateurs actifs**, sélectionnez l’icône de **clé (Réinitialiser un mot de passe)** pour **Pradeep Gupta**. 
+33. Maintenant, modifiez le mot de passe de Pradeep Gupta. Dans la liste **Utilisateurs actifs**, sélectionnez l’icône de **clé (Réinitialiser un mot de passe)** qui s’affiche à droite de **Pradeep Gupta**. 
 
-34. Dans la fenêtre **Réinitialiser le mot de passe** pour Pradeep, vérifiez que la case **Créer automatiquement un mot de passe** est cochée ; si ce n’est pas le cas, cochez-la maintenant afin que le système génère automatiquement un mot de passe pour Pradeep.  <br/>
+34. Dans la fenêtre **Réinitialiser le mot de passe** qui s’affiche pour Pradeep, vérifiez que la case **Créer automatiquement un mot de passe** est cochée ; si ce n’est pas le cas, cochez-la maintenant afin que le système génère automatiquement un mot de passe pour Pradeep.  <br/>
 
     Il s’agit seulement d’un mot de passe temporaire, car Lynne souhaite forcer Pradeep à le modifier la prochaine fois qu’il se connectera. Par conséquent, vérifiez que la case **Demander à cet utilisateur de modifier son mot de passe lors de sa première connexion** est cochée ; si ce n’est pas le cas, cochez-la.
     
@@ -284,7 +284,7 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 40. La fenêtre **Bloquer la connexion** doit afficher un message indiquant qu’Alex ne peut désormais plus se connecter (et personne ne peut se connecter avec le nom d’utilisateur d’Alex si son nom d’utilisateur a réellement été compromis). En outre, Alex sera automatiquement déconnecté des services Microsoft dans les 60 minutes qui suivent. Sélectionnez le **X** dans le coin supérieur du volet pour le fermer. 
 
-41. Lynne vient d’être informée que le nom d’utilisateur de **Nestor Wilke** avait peut-être également été compromis. Répétez les étapes 33 à 36 pour empêcher Nestor de se connecter (et pour empêcher toute autre personne d’utiliser son nom d’utilisateur pour se connecter). <br/>
+41. Lynne vient d’être informée que le nom d’utilisateur de **Nestor Wilke** avait peut-être également été compromis. Répétez les étapes 37 à 40 pour empêcher Nestor de se connecter (et pour empêcher toute autre personne d’utiliser son nom d’utilisateur pour se connecter). <br/>
 
     Lorsque vous avez essayé d’empêcher Nestor de se connecter, vous devez avoir reçu un message d’erreur indiquant **Impossible d’enregistrer les modifications**. La raison pour laquelle vous avez reçu cette erreur est que Nestor est un Administrateur général, contrairement à Lynne. Seul un Administrateur général peut empêcher un autre Administrateur général de se connecter. Lynne devra demander à Holly Dickson d’apporter cette modification. <br/>
 
@@ -306,7 +306,7 @@ Durant cette tâche, vous allez commencer par examiner les propriétés administ
 
 46. Dans **LON-CL1**, vous devriez toujours être connecté à **Microsoft 365** en tant que Holly Dickson dans votre navigateur Edge. La liste **Utilisateurs actifs** doit encore être affichée dans le **Centre d’administration Microsoft 365**. 
 
-47. Suite à une investigation approfondie, le Directeur technique d’Adatum a déterminé que le compte d’Alex Wilber n’avait en fait pas été compromis ; il a donc demandé à Holly de supprimer le blocage du compte d’utilisateur d’Alex. Répétez les étapes 33 à 36 pour débloquer son compte. Notez que la fenêtre **Bloquer la connexion** de l’étape 35 affiche désormais **Débloquer la connexion**.  <br/>
+47. Suite à une investigation approfondie, le Directeur technique d’Adatum a déterminé que le compte d’Alex Wilber n’avait en fait pas été compromis ; il a donc demandé à Holly de supprimer le blocage du compte d’utilisateur d’Alex. Répétez les étapes 37 à 40 pour débloquer son compte. Notez que la fenêtre **Bloquer la connexion** de l’étape 39 affiche désormais **Débloquer la connexion**.  <br/>
 
     Dans la fenêtre **Débloquer la connexion**, la case **Empêcher cet utilisateur de se connecter** est actuellement cochée. Décochez cette case, puis sélectionnez **Enregistrer les modifications**. <br/>
     
