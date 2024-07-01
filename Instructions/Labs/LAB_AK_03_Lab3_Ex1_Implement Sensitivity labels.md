@@ -11,30 +11,61 @@ Pour implémenter des étiquettes de confidentialité dans le cadre de votre pro
 
 **Remarque :** Bien que le changement de nom d’Azure AD en Microsoft Entra ID soit toujours en cours, le client Azure Information Protection n’a pas été renommé à la date de rédaction de cet article. Il sera à échéance renommé « client Microsoft Entra ID Protection ».
 
-1. À la fin du labo précédent, vous étiez sur LON-CL2. Basculez vers **LON-CL1**.  <br/>
-
-    Vous devez toujours être connecté à LON-CL1 sous le compte local **adatum\administrateur**, et dans votre navigateur Edge, vous devez toujours être connecté à Microsoft 365 en tant que **Holly Dickson**. 
+1. Vous devez toujours être connecté à LON-CL1 sous le compte local **adatum\administrateur**, et dans votre navigateur Edge, vous devez toujours être connecté à Microsoft 365 en tant que **Holly Dickson**. 
 
 2. Dans **Microsoft Edge**, ouvrez un nouvel onglet et entrez (ou copiez et collez) l’URL suivante dans la barre d’adresse : **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
 
-    Cette opération démarre le téléchargement du client d’étiquetage unifié Azure Information Protection.
+    Cette opération démarre le téléchargement pour le **client Protection des données Microsoft Purview**.
 
-3. Dans la fenêtre **Téléchargements** qui s’affiche en haut à droite de la page, vous constaterez que le fichier **AzInfoProtection_UI.exe** est en cours de téléchargement. Une fois le fichier téléchargé, sélectionnez le lien **Ouvrir le fichier** qui apparaît sous le nom de fichier.  <br/>
+3. Dans la fenêtre **Téléchargements** qui s’affiche en haut à droite de la page, vous constaterez que le fichier **PurviewInfoProtection.exe** est en cours de téléchargement. Une fois le fichier téléchargé, sélectionnez le lien **Ouvrir le fichier** qui apparaît sous le nom de fichier.
 
-    **Remarque :** Des tests ont montré que l’ouverture de l’Assistant **Microsoft Azure Information Protection** peut parfois prendre jusqu’à 10 à 15 secondes. Évitez de sélectionner **Ouvrir le fichier** une deuxième fois si vous n’êtes pas absolument certain que l’Assistant n’a pas été lancé.
+4. L’Assistant **Microsoft Azure Information Protection** s’ouvrira. Si l’Assistant ne s’affiche pas sur le Bureau, sélectionnez l’icône de l’Assistant dans la barre des tâches pour l’afficher.
 
-4. L’Assistant **Microsoft Azure Information Protection** finira par s’ouvrir. Si l’Assistant ne s’affiche pas sur le Bureau, sélectionnez l’icône de l’Assistant dans la barre des tâches pour l’afficher.
-
-5. Dans la fenêtre **Installer le client Azure Information Protection** qui s’affiche, décochez la case **Aidez-nous à améliorer Azure Information Protection en envoyant des statistiques d’utilisation à Microsoft**, puis cochez le bouton **J’accepte**.
+5. Dans l’Assistant, dans la fenêtre **Installer le client **Protection des données Microsoft Purview**** qui s’affiche, sélectionnez la case **Je reconnais que le complément AIP pour Office sera désinstallé (obligatoire)** et décochez la case **Aidez à améliorer Protection des données Microsoft Purview en envoyant des statistiques d’utilisation à Microsoft**. Sélectionnez ensuite le bouton **J’accepte**.
 
 6. Une fois l’installation terminée, sélectionnez **Fermer**.
 
-7. Dans votre navigateur Edge, fermez l’onglet **Téléchargement** qui a été ouvert lors de cette tâche pour télécharger le client Azure Information Protection.
-
 Vous avez correctement installé le client d’étiquetage unifié Azure Information Protection sur la machine virtuelle LON-CL1.
 
+### Tâche 2 : activer les étiquettes de confidentialité pour les fichiers dans SharePoint et OneDrive
 
-### Tâche 2 – Créer une étiquette de confidentialité
+Dans cet exercice, vous activerez des étiquettes de confidentialité pour les fichiers Office et les fichiers PDF pris en charge dans SharePoint et OneDrive. Lorsque cette fonctionnalité est activée, les utilisateurs voient le bouton **Confidentialité** sur le ruban, afin de pouvoir appliquer des étiquettes. Ils voient également tout nom d’étiquette appliqué sur la barre d’état. Pour SharePoint, les utilisateurs peuvent également voir et appliquer des étiquettes de confidentialité depuis le volet d’informations.
+
+L’activation de cette fonctionnalité permet en outre à SharePoint et OneDrive de traiter le contenu des fichiers Office et, éventuellement, des documents PDF chiffrés à l’aide d’une étiquette de confidentialité. L’étiquette peut être appliquée dans Office pour le web ou dans les applications de bureau Office, et téléchargée ou enregistrée dans SharePoint et OneDrive. Tant que vous n’activez pas cette fonctionnalité, ces services ne peuvent pas traiter les fichiers chiffrés, ce qui signifie que la co-création, la découverte électronique, la protection contre la perte de données, la recherche et d’autres fonctionnalités collaboratives ne fonctionneront pas pour ces fichiers.
+
+Vous commencerez par activer les étiquettes de confidentialité pour les fichiers Office en ligne stockés dans SharePoint et OneDrive. Vous activerez ensuite la prise en charge des fichiers PDF.
+
+**Remarque :** Comme pour toutes les modifications de configuration au niveau du tenant pour SharePoint et OneDrive, la modification met environ 15 minutes pour entrer en vigueur.
+
+1. Sur LON-CL1, dans votre navigateur Edge, vous devez toujours être connecté à Microsoft 365 en tant que **Holly Dickson**.
+
+2. Dans votre navigateur Edge, vous devez toujours avoir un onglet ouvert pour le **Centre d’administration Microsoft 365**. Si ce n’est pas le cas, ouvrez un nouvel onglet et entrez l’URL suivante : **https://admin.microsoft.com**.
+
+3. Dans le **Centre d’administration Microsoft 365**, si nécessaire, sélectionnez **... Afficher tout**. Sélectionnez **Conformité** sous le groupe **Centres d’administration**. Cela ouvre le portail Microsoft Purview dans un nouvel onglet.
+
+4. Vous commencerez en activant les étiquettes de confidentialité pour les fichiers Office en ligne stockés dans SharePoint et OneDrive. <br/>
+
+    Dans le portail **Microsoft Purview** , sous la section **Solutions** du volet de navigation, sélectionnez **Protection des informations**, puis sélectionnez **Étiquettes**.
+
+5. Sur la page **Étiquettes**, le message suivant doit apparaître au milieu de la page : **Votre organisation n’a pas activé la capacité à traiter du contenu dans des fichiers Office en ligne qui disposent d’étiquettes de confidentialité chiffrées appliquées et qui sont enregistrées dans OneDrive et SharePoint. Vous pouvez activer cette option ici, mais notez qu’une configuration supplémentaire est requise pour les environnements multigéographiques.** <br/>
+
+    Sous ce message se trouve un bouton**Activer maintenant**. Sélectionnez ce bouton.  <br/>
+
+    **Remarque :** La commande s’exécute immédiatement et lorsque la page sera actualisée, vous ne verrez plus le message ni le bouton.
+
+6. Vous allez maintenant activer la protection PDF pour les fichiers dans SharePoint et OneDrive. <br/>
+
+    Dans le portail **Microsoft Purview**, sous **Protection des informations** du volet de navigation, sélectionnez **Étiquetage automatique**.
+
+7. Sur la page **Étiquetage automatique**, vous devez voir une bannière **Protéger les fichiers PDF avec l’étiquetage automatique** au milieu de la page. Sélectionnez le titre **Protéger les PDF avec l’étiquetage automatique** pour activer la protection PDF pour les fichiers dans SharePoint et OneDrive. 
+
+8. Dans la boîte de dialogue **Étiquetage automatique** qui s’affiche, sélectionnez **Confirmer** pour confirmer que vous souhaitez activer la protection PDF pour les fichiers dans SharePoint et OneDrive. 
+
+    **Remarque :** La commande s’exécute immédiatement et lorsque la page sera actualisée, vous ne verrez plus la bannière **Protéger les PDF avec l’étiquetage automatique**.
+
+9. Laissez votre navigateur Edge ouvert ainsi que tous les onglets. 
+
+### Tâche 3 : créer une étiquette de confidentialité
 
 Dans cet exercice, vous allez créer une étiquette de confidentialité et l’ajouter à la stratégie par défaut afin qu’elle soit valide pour tous les utilisateurs du locataire Adatum.
 
@@ -175,7 +206,7 @@ Dans cet exercice, vous allez créer une étiquette de confidentialité et l’a
 45. Dans la page **Nouvelle stratégie créée**, sélectionnez **Terminé**.
 
 
-### Tâche 3 : Affecter une étiquette de confidentialité préexistante à un document
+### Tâche 4 : affecter une étiquette de confidentialité préexistante à un document
 
 Comme indiqué dans les instructions au début de ce labo, il n’est pas possible de tester immédiatement l’étiquette de confidentialité et la stratégie d’étiquette que vous avez créées lors de la tâche précédente. Cela est dû au fait qu’il faut jusqu’à 24 heures pour qu’une nouvelle stratégie d’étiquette se propage via Microsoft 365 et que son étiquette devienne visible dans les applications telles que Microsoft Word et Outlook.
 
@@ -230,9 +261,9 @@ Au lieu de cela, vous allez tester l’une des étiquettes de confidentialité p
 Vous venez de créer un document Word contenant l’étiquette Hautement confidentielle intitulée **Project – Falcon**. 
 
 
-### Tâche 4 : Protéger un document à l’aide de Microsoft Entra ID Protection
+### Tâche 5 : protéger un document en utilisant Protection des données Microsoft Purview
 
-Durant la tâche précédente, vous avez créé un document Word et vous l’avez protégé avec l’étiquette de confidentialité **Project – Falcon**. Cette étiquette a inséré un filigrane dans le document. Lors de cette tâche, vous allez partager le document que vous avez créé avec Joni Sherman, et restreindre Joni à l’autorisation « Affichage uniquement ». Cela vous permettra de voir comment Microsoft Entra ID Protection protège le document en fonction des paramètres que vous configurez.
+Durant la tâche précédente, vous avez créé un document Word et vous l’avez protégé avec l’étiquette de confidentialité **Project – Falcon**. Cette étiquette a inséré un filigrane dans le document. Lors de cette tâche, vous allez partager le document que vous avez créé avec Joni Sherman, et restreindre Joni à l’autorisation « Affichage uniquement ». Cela vous permettra de voir comment Protection des données Microsoft Purview protège le document en fonction des paramètres que vous configurez.
 
 Pour vérifier si la protection que vous avez affectée au document fonctionne, vous devez d’abord envoyer le document par e-mail à deux personnes : à Joni Sherman et à votre propre adresse e-mail personnelle. Vous vérifierez ensuite que Joni peut uniquement afficher le document (et pas le modifier), et vous vérifierez que vous ne pouvez pas accéder au document, car il n’a pas été partagé avec vous. Pour finir, vous modifierez l’autorisation sur le document afin que Joni puisse le modifier, et vous lui enverrez ce document mis à jour par e-mail à des fins de test. L’objectif des deux e-mails à Joni, l’un avec un lien de document qui fournit un accès en lecture seule et l’autre avec un lien de document qui autorise sa modification, est de voir comment Microsoft Entra ID Protection peut fournir différents niveaux de protection des documents. 
 
@@ -242,7 +273,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
 3. Dans la page **Applications**, cliquez avec le bouton droit sur la vignette **Outlook** et sélectionnez **Ouvrir dans un nouvel onglet**. La boîte aux lettres d’Holly s’ouvre dans Outlook sur le web dans un nouvel onglet de navigateur. 
 
-4. Dans **Outlook sur le web**, sélectionnez **Nouveau courrier** dans le coin supérieur gauche de l’écran.
+4. Dans **Outlook sur le web**, sélectionnez **Nouveau courrier** en haut de l’écran.
 
 5. Entrez les informations suivantes dans le formulaire d’e-mail :
 
@@ -268,7 +299,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
 11. Dans la fenêtre **Partager « DocumentProtégé1 »**, pointez votre souris sur l’icône « œil » qui apparaît à droite du nom de Joni. La mention **Afficher**, qui est le paramètre actuel que vous lui avez affecté pour ce document, doit alors apparaître. L’icône « œil » est synonyme d’autorisation « Afficher ». Sélectionnez le bouton **Copier le lien**. 
 
-12. Une fois que le message **Lien copié** apparaît en bas de la fenêtre **Partager « DocumentProtégé1 »**, sélectionnez le X dans le coin supérieur droit de la fenêtre pour la fermer.
+12. Une fois que le message **Lien copié** apparaît en bas de la fenêtre **Partager "ProtectedDocument1"**, sélectionnez le X dans le coin supérieur de la fenêtre pour la fermer.
 
 13. Dans votre navigateur Edge, sélectionnez l’onglet **Courrier – Holly Dickson – Outlook** pour revenir à votre e-mail. Dans le corps du message, sous le texte que vous avez ajouté précédemment, collez (Ctrl+V) le lien vers le document partagé que vous venez de copier dans le Presse-papiers. Un lien pour le fichier nommé **DocumentProtégé1.docx** doit apparaître. 
 
@@ -286,7 +317,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
 20. Dans la fenêtre **Se connecter**, entrez **JoniS@xxxxxZZZZZZ.onmicrosoft** (où xxxxxZZZZZZ est le préfixe de locataire fourni par votre fournisseur d’hébergement de labo), puis sélectionnez **Suivant**.
 
-21. Dans la fenêtre **Entrer un mot de passe**, entrez le **mot de passe utilisateur** fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**. Si nécessaire, complétez le processus de connexion MFA.
+21. Dans la fenêtre **Entrer le mot de passe**, entrez le nouveau mot de passe de l’utilisateur que vous avez précédemment affecté au compte de Joni, puis sélectionnez **Se connecter**. 
 
 22. Si une fenêtre **Bienvenue** s’affiche, sélectionnez le X pour la fermer.
 
@@ -340,7 +371,7 @@ Pour vérifier si la protection que vous avez affectée au document fonctionne, 
 
 36. Lorsque Joni avait l’autorisation Affichage uniquement, le document s’ouvrait dans le volet Mode Lecture. Par conséquent, Joni ne pouvait pas le modifier. Cette version du document fournit à Joni l’autorisation Modifier. Cette fois, le document doit donc s’ouvrir dans Word en mode d’édition normal. Vérifiez que vous pouvez entrer du texte dans le document. 
 
-    **Remarque :**  Lors de cette tâche, vous avez vérifié que Microsoft Entra ID Protection protégeait le document en fonction des paramètres de stratégie d’informations d'identification personnelle que vous aviez configurés. Lorsque Joni disposait de l’autorisation Affichage uniquement, le document s’ouvrait en Mode Lecture et elle ne pouvait pas le modifier. Lorsque l’autorisation Modifier a été octroyée à Joni, le document s’est ouvert dans Word et elle a pu le modifier. Et comme Holly n’a pas partagé le document avec vous, vous n’avez pas pu l’ouvrir quand elle l’a envoyé dans un e-mail à votre boîte aux lettres personnelle. 
+    **Remarque :**  Dans cette tâche, vous avez vérifié que Protection des données Microsoft Purview protégeait le document en fonction des paramètres de stratégie des informations d'identification personnelle que vous avez configurés. Lorsque Joni disposait de l’autorisation Affichage uniquement, le document s’ouvrait en Mode Lecture et elle ne pouvait pas le modifier. Lorsque l’autorisation Modifier a été octroyée à Joni, le document s’est ouvert dans Word et elle a pu le modifier. Et comme Holly n’a pas partagé le document avec vous, vous n’avez pas pu l’ouvrir quand elle l’a envoyé dans un e-mail à votre boîte aux lettres personnelle. 
 
 ## Fin du labo 3
 
